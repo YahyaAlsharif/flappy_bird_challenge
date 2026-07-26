@@ -1,0 +1,51 @@
+{
+  "selected_training_budget": 2250000,
+  "actual_training_transitions": 25000,
+  "training_duration_seconds": 40.73848079999971,
+  "selected_worker_configuration": {
+    "n_envs": 8,
+    "torch_threads": 2,
+    "gradient_steps": 1,
+    "approx_transitions_per_update": 8.0,
+    "measured_learning_transitions_per_second": 340.88774668767076
+  },
+  "best_checkpoint_step": null,
+  "best_periodic_ranking_key": [
+    -1,
+    -1,
+    -1,
+    -1.0,
+    -1
+  ],
+  "final_periodic_active_seeds": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "final_periodic_score_limit": 1000,
+  "final_unseen_holdout_seeds": [
+    1000001,
+    1000002,
+    1000003,
+    1000004,
+    1000005
+  ],
+  "final_unseen_holdout_scores": [
+    0,
+    0,
+    0,
+    1,
+    0
+  ],
+  "final_unseen_holdout_statistics": {
+    "mean": 0.2,
+    "median": 0.0,
+    "std": 0.4,
+    "minimum": 0,
+    "maximum": 1
+  },
+  "exported_model_path": "C:\\Users\\yahya\\OneDrive - UMM AL-QURA UNIVERSITY\\KAUST\\Summer\\week4\\flappy_bird\\artifacts\\ddqn_local_2250000_20260726_173620_smoke\\exported_model.pt",
+  "gif_path": "C:\\Users\\yahya\\OneDrive - UMM AL-QURA UNIVERSITY\\KAUST\\Summer\\week4\\flappy_bird\\artifacts\\ddqn_local_2250000_20260726_173620_smoke\\demonstration.gif"
+}
