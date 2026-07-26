@@ -1,0 +1,614 @@
+{
+  "algorithm": "Dueling Double DQN with Prioritized Experience Replay",
+  "observation_mode": "12 normalized features; use_lidar=False",
+  "target_score": 1000,
+  "best_training_score": 85,
+  "final_deterministic_evaluation": {
+    "episodes": [
+      {
+        "seed": 2026,
+        "score": 1000,
+        "reward": 4669.099999999571,
+        "steps": 37691,
+        "target_reached": true,
+        "terminated": false,
+        "truncated": true,
+        "safety_limit_reached": false
+      },
+      {
+        "seed": 2027,
+        "score": 1000,
+        "reward": 4669.099999999571,
+        "steps": 37691,
+        "target_reached": true,
+        "terminated": false,
+        "truncated": true,
+        "safety_limit_reached": false
+      },
+      {
+        "seed": 2028,
+        "score": 584,
+        "reward": 2728.8999999989096,
+        "steps": 22044,
+        "target_reached": false,
+        "terminated": true,
+        "truncated": false,
+        "safety_limit_reached": false
+      }
+    ],
+    "scores": [
+      1000,
+      1000,
+      584
+    ],
+    "mean_score": 861.3333333333334,
+    "minimum_score": 584,
+    "maximum_score": 1000,
+    "solved": false
+  },
+  "evaluation_history": [
+    {
+      "episodes": [
+        {
+          "seed": 2026,
+          "score": 1,
+          "reward": 8.399999999999986,
+          "steps": 86,
+          "target_reached": false,
+          "terminated": true,
+          "truncated": false,
+          "safety_limit_reached": false
+        },
+        {
+          "seed": 2027,
+          "score": 1,
+          "reward": 8.399999999999986,
+          "steps": 86,
+          "target_reached": false,
+          "terminated": true,
+          "truncated": false,
+          "safety_limit_reached": false
+        },
+        {
+          "seed": 2028,
+          "score": 3,
+          "reward": 17.90000000000001,
+          "steps": 163,
+          "target_reached": false,
+          "terminated": true,
+          "truncated": false,
+          "safety_limit_reached": false
+        }
+      ],
+      "scores": [
+        1,
+        1,
+        3
+      ],
+      "mean_score": 1.6666666666666667,
+      "minimum_score": 1,
+      "maximum_score": 3,
+      "solved": false,
+      "training_step": 250002
+    },
+    {
+      "episodes": [
+        {
+          "seed": 2026,
+          "score": 2,
+          "reward": 13.099999999999973,
+          "steps": 124,
+          "target_reached": false,
+          "terminated": true,
+          "truncated": false,
+          "safety_limit_reached": false
+        },
+        {
+          "seed": 2027,
+          "score": 19,
+          "reward": 92.39999999999917,
+          "steps": 764,
+          "target_reached": false,
+          "terminated": true,
+          "truncated": false,
+          "safety_limit_reached": false
+        },
+        {
+          "seed": 2028,
+          "score": 22,
+          "reward": 106.39999999999854,
+          "steps": 877,
+          "target_reached": false,
+          "terminated": true,
+          "truncated": false,
+          "safety_limit_reached": false
+        }
+      ],
+      "scores": [
+        2,
+        19,
+        22
+      ],
+      "mean_score": 14.333333333333334,
+      "minimum_score": 2,
+      "maximum_score": 22,
+      "solved": false,
+      "training_step": 500001
+    },
+    {
+      "episodes": [
+        {
+          "seed": 2026,
+          "score": 349,
+          "reward": 1630.7999999996946,
+          "steps": 13178,
+          "target_reached": false,
+          "terminated": true,
+          "truncated": false,
+          "safety_limit_reached": false
+        },
+        {
+          "seed": 2027,
+          "score": 65,
+          "reward": 305.3000000000008,
+          "steps": 2479,
+          "target_reached": false,
+          "terminated": true,
+          "truncated": false,
+          "safety_limit_reached": false
+        },
+        {
+          "seed": 2028,
+          "score": 184,
+          "reward": 859.1000000000998,
+          "steps": 6955,
+          "target_reached": false,
+          "terminated": true,
+          "truncated": false,
+          "safety_limit_reached": false
+        }
+      ],
+      "scores": [
+        349,
+        65,
+        184
+      ],
+      "mean_score": 199.33333333333334,
+      "minimum_score": 65,
+      "maximum_score": 349,
+      "solved": false,
+      "training_step": 750000
+    },
+    {
+      "episodes": [
+        {
+          "seed": 2026,
+          "score": 8,
+          "reward": 40.90000000000026,
+          "steps": 348,
+          "target_reached": false,
+          "terminated": true,
+          "truncated": false,
+          "safety_limit_reached": false
+        },
+        {
+          "seed": 2027,
+          "score": 58,
+          "reward": 274.3999999999954,
+          "steps": 2233,
+          "target_reached": false,
+          "terminated": true,
+          "truncated": false,
+          "safety_limit_reached": false
+        },
+        {
+          "seed": 2028,
+          "score": 74,
+          "reward": 348.9000000000087,
+          "steps": 2834,
+          "target_reached": false,
+          "terminated": true,
+          "truncated": false,
+          "safety_limit_reached": false
+        }
+      ],
+      "scores": [
+        8,
+        58,
+        74
+      ],
+      "mean_score": 46.666666666666664,
+      "minimum_score": 8,
+      "maximum_score": 74,
+      "solved": false,
+      "training_step": 1000002
+    },
+    {
+      "episodes": [
+        {
+          "seed": 2026,
+          "score": 23,
+          "reward": 110.89999999999834,
+          "steps": 913,
+          "target_reached": false,
+          "terminated": true,
+          "truncated": false,
+          "safety_limit_reached": false
+        },
+        {
+          "seed": 2027,
+          "score": 8,
+          "reward": 40.90000000000026,
+          "steps": 348,
+          "target_reached": false,
+          "terminated": true,
+          "truncated": false,
+          "safety_limit_reached": false
+        },
+        {
+          "seed": 2028,
+          "score": 7,
+          "reward": 36.40000000000021,
+          "steps": 312,
+          "target_reached": false,
+          "terminated": true,
+          "truncated": false,
+          "safety_limit_reached": false
+        }
+      ],
+      "scores": [
+        23,
+        8,
+        7
+      ],
+      "mean_score": 12.666666666666666,
+      "minimum_score": 7,
+      "maximum_score": 23,
+      "solved": false,
+      "training_step": 1250001
+    },
+    {
+      "episodes": [
+        {
+          "seed": 2026,
+          "score": 33,
+          "reward": 155.79999999999634,
+          "steps": 1272,
+          "target_reached": false,
+          "terminated": true,
+          "truncated": false,
+          "safety_limit_reached": false
+        },
+        {
+          "seed": 2027,
+          "score": 234,
+          "reward": 1093.8000000000784,
+          "steps": 8843,
+          "target_reached": false,
+          "terminated": true,
+          "truncated": false,
+          "safety_limit_reached": false
+        },
+        {
+          "seed": 2028,
+          "score": 6,
+          "reward": 29.800000000000136,
+          "steps": 255,
+          "target_reached": false,
+          "terminated": true,
+          "truncated": false,
+          "safety_limit_reached": false
+        }
+      ],
+      "scores": [
+        33,
+        234,
+        6
+      ],
+      "mean_score": 91.0,
+      "minimum_score": 6,
+      "maximum_score": 234,
+      "solved": false,
+      "training_step": 1500000
+    },
+    {
+      "episodes": [
+        {
+          "seed": 2026,
+          "score": 191,
+          "reward": 893.3000000001058,
+          "steps": 7225,
+          "target_reached": false,
+          "terminated": true,
+          "truncated": false,
+          "safety_limit_reached": false
+        },
+        {
+          "seed": 2027,
+          "score": 220,
+          "reward": 1028.8000000001248,
+          "steps": 8319,
+          "target_reached": false,
+          "terminated": true,
+          "truncated": false,
+          "safety_limit_reached": false
+        },
+        {
+          "seed": 2028,
+          "score": 160,
+          "reward": 750.4000000000804,
+          "steps": 6075,
+          "target_reached": false,
+          "terminated": true,
+          "truncated": false,
+          "safety_limit_reached": false
+        }
+      ],
+      "scores": [
+        191,
+        220,
+        160
+      ],
+      "mean_score": 190.33333333333334,
+      "minimum_score": 160,
+      "maximum_score": 220,
+      "solved": false,
+      "training_step": 1750002
+    },
+    {
+      "episodes": [
+        {
+          "seed": 2026,
+          "score": 62,
+          "reward": 292.89999999999867,
+          "steps": 2382,
+          "target_reached": false,
+          "terminated": true,
+          "truncated": false,
+          "safety_limit_reached": false
+        },
+        {
+          "seed": 2027,
+          "score": 28,
+          "reward": 132.79999999999737,
+          "steps": 1087,
+          "target_reached": false,
+          "terminated": true,
+          "truncated": false,
+          "safety_limit_reached": false
+        },
+        {
+          "seed": 2028,
+          "score": 97,
+          "reward": 454.8000000000275,
+          "steps": 3686,
+          "target_reached": false,
+          "terminated": true,
+          "truncated": false,
+          "safety_limit_reached": false
+        }
+      ],
+      "scores": [
+        62,
+        28,
+        97
+      ],
+      "mean_score": 62.333333333333336,
+      "minimum_score": 28,
+      "maximum_score": 97,
+      "solved": false,
+      "training_step": 2000001
+    },
+    {
+      "episodes": [
+        {
+          "seed": 2026,
+          "score": 815,
+          "reward": 3806.8999999981393,
+          "steps": 30745,
+          "target_reached": false,
+          "terminated": true,
+          "truncated": false,
+          "safety_limit_reached": false
+        },
+        {
+          "seed": 2027,
+          "score": 1000,
+          "reward": 4669.099999999571,
+          "steps": 37691,
+          "target_reached": true,
+          "terminated": false,
+          "truncated": true,
+          "safety_limit_reached": false
+        },
+        {
+          "seed": 2028,
+          "score": 488,
+          "reward": 2280.8999999992297,
+          "steps": 18428,
+          "target_reached": false,
+          "terminated": true,
+          "truncated": false,
+          "safety_limit_reached": false
+        }
+      ],
+      "scores": [
+        815,
+        1000,
+        488
+      ],
+      "mean_score": 767.6666666666666,
+      "minimum_score": 488,
+      "maximum_score": 1000,
+      "solved": false,
+      "training_step": 2250000
+    },
+    {
+      "episodes": [
+        {
+          "seed": 2026,
+          "score": 47,
+          "reward": 222.89999999999333,
+          "steps": 1817,
+          "target_reached": false,
+          "terminated": true,
+          "truncated": false,
+          "safety_limit_reached": false
+        },
+        {
+          "seed": 2027,
+          "score": 62,
+          "reward": 292.89999999999867,
+          "steps": 2382,
+          "target_reached": false,
+          "terminated": true,
+          "truncated": false,
+          "safety_limit_reached": false
+        },
+        {
+          "seed": 2028,
+          "score": 740,
+          "reward": 3456.8999999983894,
+          "steps": 27920,
+          "target_reached": false,
+          "terminated": true,
+          "truncated": false,
+          "safety_limit_reached": false
+        }
+      ],
+      "scores": [
+        47,
+        62,
+        740
+      ],
+      "mean_score": 283.0,
+      "minimum_score": 47,
+      "maximum_score": 740,
+      "solved": false,
+      "training_step": 2500002
+    },
+    {
+      "episodes": [
+        {
+          "seed": 2026,
+          "score": 1000,
+          "reward": 4669.099999999571,
+          "steps": 37691,
+          "target_reached": true,
+          "terminated": false,
+          "truncated": true,
+          "safety_limit_reached": false
+        },
+        {
+          "seed": 2027,
+          "score": 1000,
+          "reward": 4669.099999999571,
+          "steps": 37691,
+          "target_reached": true,
+          "terminated": false,
+          "truncated": true,
+          "safety_limit_reached": false
+        },
+        {
+          "seed": 2028,
+          "score": 584,
+          "reward": 2728.8999999989096,
+          "steps": 22044,
+          "target_reached": false,
+          "terminated": true,
+          "truncated": false,
+          "safety_limit_reached": false
+        }
+      ],
+      "scores": [
+        1000,
+        1000,
+        584
+      ],
+      "mean_score": 861.3333333333334,
+      "minimum_score": 584,
+      "maximum_score": 1000,
+      "solved": false,
+      "training_step": 2750001
+    },
+    {
+      "episodes": [
+        {
+          "seed": 2026,
+          "score": 289,
+          "reward": 1352.3999999998932,
+          "steps": 10934,
+          "target_reached": false,
+          "terminated": true,
+          "truncated": false,
+          "safety_limit_reached": false
+        },
+        {
+          "seed": 2027,
+          "score": 379,
+          "reward": 1772.399999999593,
+          "steps": 14324,
+          "target_reached": false,
+          "terminated": true,
+          "truncated": false,
+          "safety_limit_reached": false
+        },
+        {
+          "seed": 2028,
+          "score": 520,
+          "reward": 2428.7999999991243,
+          "steps": 19619,
+          "target_reached": false,
+          "terminated": true,
+          "truncated": false,
+          "safety_limit_reached": false
+        }
+      ],
+      "scores": [
+        289,
+        379,
+        520
+      ],
+      "mean_score": 396.0,
+      "minimum_score": 289,
+      "maximum_score": 520,
+      "solved": false,
+      "training_step": 3000000
+    }
+  ],
+  "seed": 42,
+  "pipe_gap": 100,
+  "n_envs": 3,
+  "total_training_steps": 3000000,
+  "training_hours": 5.0490666525894445,
+  "model_config": {
+    "state_dim": 12,
+    "action_dim": 2,
+    "hidden_dim": 192,
+    "learning_rate": 0.0001,
+    "gamma": 0.99,
+    "buffer_size": 500000,
+    "batch_size": 256,
+    "learning_starts": 20000,
+    "train_every_vector_steps": 1,
+    "gradient_steps": 1,
+    "target_update_interval": 10000,
+    "epsilon_start": 1.0,
+    "epsilon_end": 0.05,
+    "epsilon_decay_steps": 400000,
+    "exploration_flap_probability": 0.08,
+    "per_alpha": 0.3,
+    "per_beta_start": 0.4,
+    "per_beta_end": 1.0,
+    "n_envs": 3,
+    "target_score": 1000,
+    "pipe_gap": 100,
+    "reward_shaping": {
+      "survival": 0.05,
+      "pipe": 5.0,
+      "death": -5.0,
+      "top": -1.0
+    }
+  },
+  "selected_source_model": "/kaggle/working/flappy_ddqn/best_model.pt"
+}
