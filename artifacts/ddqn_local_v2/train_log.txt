@@ -1,0 +1,146 @@
+[2026-07-26T20:39:18] Starting fresh training run toward 5,000,000 transitions.
+[2026-07-26T20:40:21] transitions=50,000/5,000,000 episodes=974 recent_scores[mean=0.1 min=0 max=1] epsilon=0.934 loss=0.0255 replay=50,000 elapsed=00:01:02 tps=802.4 (avg 802.4) eta=01:42:48
+[2026-07-26T20:41:58] transitions=100,000/5,000,000 episodes=1,928 recent_scores[mean=0.2 min=0 max=2] epsilon=0.868 loss=0.0556 replay=100,000 elapsed=00:02:39 tps=517.0 (avg 628.8) eta=02:09:52
+[2026-07-26T20:43:34] transitions=150,000/5,000,000 episodes=2,829 recent_scores[mean=0.2 min=0 max=2] epsilon=0.802 loss=0.0993 replay=150,000 elapsed=00:04:15 tps=517.1 (avg 586.6) eta=02:17:48
+[2026-07-26T20:45:11] transitions=200,000/5,000,000 episodes=3,692 recent_scores[mean=0.4 min=0 max=2] epsilon=0.736 loss=0.0796 replay=200,000 elapsed=00:05:52 tps=518.7 (avg 568.0) eta=02:20:50
+[2026-07-26T20:46:47] transitions=250,000/5,000,000 episodes=4,496 recent_scores[mean=0.4 min=0 max=3] epsilon=0.670 loss=0.0807 replay=250,000 elapsed=00:07:28 tps=518.2 (avg 557.3) eta=02:22:03
+[2026-07-26T20:46:47] Evaluation @ 250,000: scores=[4, 1, 1, 7, 2] limit=1000 ranking_key=[0, 0, 1, 3.0, 7] next_seeds=[1, 2, 3, 4, 5]
+[2026-07-26T20:46:48] Checkpoint written: ddqn_000250000.pt (and latest.pt)
+[2026-07-26T20:48:25] transitions=300,000/5,000,000 episodes=5,261 recent_scores[mean=0.5 min=0 max=3] epsilon=0.604 loss=0.0809 replay=300,000 elapsed=00:09:06 tps=511.9 (avg 549.2) eta=02:22:38
+[2026-07-26T20:50:00] transitions=350,000/5,000,000 episodes=6,021 recent_scores[mean=0.6 min=0 max=4] epsilon=0.538 loss=0.0586 replay=350,000 elapsed=00:10:41 tps=523.0 (avg 545.2) eta=02:22:08
+[2026-07-26T20:51:38] transitions=400,000/5,000,000 episodes=6,742 recent_scores[mean=0.8 min=0 max=4] epsilon=0.472 loss=0.0919 replay=400,000 elapsed=00:12:19 tps=511.3 (avg 540.8) eta=02:21:46
+[2026-07-26T20:53:18] transitions=450,000/5,000,000 episodes=7,387 recent_scores[mean=0.9 min=0 max=4] epsilon=0.406 loss=0.0745 replay=450,000 elapsed=00:13:59 tps=502.9 (avg 536.3) eta=02:21:24
+[2026-07-26T20:54:56] transitions=500,000/5,000,000 episodes=7,981 recent_scores[mean=1.2 min=0 max=7] epsilon=0.340 loss=0.1163 replay=500,000 elapsed=00:15:37 tps=505.8 (avg 533.1) eta=02:20:41
+[2026-07-26T20:54:57] Evaluation @ 500,000: scores=[4, 5, 1, 7, 2] limit=1000 ranking_key=[0, 0, 1, 3.8, 7] next_seeds=[1, 2, 3, 4, 5]
+[2026-07-26T20:54:57] Checkpoint written: ddqn_000500000.pt (and latest.pt)
+[2026-07-26T20:56:37] transitions=550,000/5,000,000 episodes=8,503 recent_scores[mean=1.5 min=0 max=6] epsilon=0.274 loss=0.0004 replay=500,000 elapsed=00:17:18 tps=495.0 (avg 529.4) eta=02:20:06
+[2026-07-26T20:58:17] transitions=600,000/5,000,000 episodes=8,990 recent_scores[mean=1.6 min=0 max=9] epsilon=0.208 loss=0.1459 replay=500,000 elapsed=00:18:58 tps=500.9 (avg 526.9) eta=02:19:11
+[2026-07-26T20:59:57] transitions=650,000/5,000,000 episodes=9,447 recent_scores[mean=1.9 min=0 max=12] epsilon=0.142 loss=0.1179 replay=500,000 elapsed=00:20:38 tps=503.2 (avg 525.0) eta=02:18:06
+[2026-07-26T21:01:38] transitions=700,000/5,000,000 episodes=9,779 recent_scores[mean=3.0 min=0 max=12] epsilon=0.076 loss=0.0988 replay=500,000 elapsed=00:22:19 tps=493.6 (avg 522.6) eta=02:17:08
+[2026-07-26T21:03:17] transitions=750,000/5,000,000 episodes=10,031 recent_scores[mean=4.4 min=0 max=22] epsilon=0.010 loss=0.1225 replay=500,000 elapsed=00:23:58 tps=502.5 (avg 521.2) eta=02:15:54
+[2026-07-26T21:03:18] Evaluation @ 750,000: scores=[1, 1, 1, 21, 8] limit=1000 ranking_key=[0, 0, 1, 6.4, 21] next_seeds=[1, 2, 3, 4, 5]
+[2026-07-26T21:03:18] Checkpoint written: ddqn_000750000.pt (and latest.pt)
+[2026-07-26T21:05:00] transitions=800,000/5,000,000 episodes=10,228 recent_scores[mean=5.3 min=0 max=29] epsilon=0.010 loss=0.2215 replay=500,000 elapsed=00:25:41 tps=488.5 (avg 519.0) eta=02:14:51
+[2026-07-26T21:07:40] transitions=850,000/5,000,000 episodes=10,420 recent_scores[mean=5.7 min=0 max=28] epsilon=0.010 loss=0.1226 replay=500,000 elapsed=00:28:21 tps=311.5 (avg 499.5) eta=02:18:28
+[2026-07-26T21:10:31] transitions=900,000/5,000,000 episodes=10,609 recent_scores[mean=5.6 min=0 max=48] epsilon=0.010 loss=0.1164 replay=500,000 elapsed=00:31:12 tps=292.8 (avg 480.6) eta=02:22:10
+[2026-07-26T21:18:49] Resumed from <repo>\artifacts\ddqn_local_v2\checkpoints\latest.pt at transition 750,000 (target 5,000,000); replay buffer restarts empty and warms for 20,000 transitions.
+[2026-07-26T21:20:23] transitions=800,000/5,000,000 episodes=501 recent_scores[mean=3.1 min=0 max=29] epsilon=0.010 loss=0.1402 replay=50,000 elapsed=00:01:34 tps=528.7 (avg 8458.4) eta=00:08:16
+[2026-07-26T21:22:54] transitions=850,000/5,000,000 episodes=688 recent_scores[mean=5.8 min=0 max=31] epsilon=0.010 loss=0.1516 replay=100,000 elapsed=00:04:05 tps=331.0 (avg 3460.5) eta=00:19:59
+[2026-07-26T21:24:38] transitions=900,000/5,000,000 episodes=866 recent_scores[mean=5.8 min=0 max=32] epsilon=0.010 loss=0.1008 replay=150,000 elapsed=00:05:48 tps=484.6 (avg 2580.3) eta=00:26:28
+[2026-07-26T21:26:21] transitions=950,000/5,000,000 episodes=1,051 recent_scores[mean=5.9 min=0 max=35] epsilon=0.010 loss=0.1349 replay=200,000 elapsed=00:07:32 tps=484.4 (avg 2101.7) eta=00:32:07
+[2026-07-26T21:28:04] transitions=1,000,000/5,000,000 episodes=1,194 recent_scores[mean=7.7 min=0 max=38] epsilon=0.010 loss=0.1086 replay=250,000 elapsed=00:09:15 tps=485.1 (avg 1801.5) eta=00:37:00
+[2026-07-26T21:28:05] Evaluation @ 1,000,000: scores=[4, 1, 1, 22, 8] limit=1000 ranking_key=[0, 0, 1, 7.2, 22] next_seeds=[1, 2, 3, 4, 5]
+[2026-07-26T21:28:05] Checkpoint written: ddqn_001000000.pt (and latest.pt)
+[2026-07-26T21:29:48] transitions=1,050,000/5,000,000 episodes=1,316 recent_scores[mean=9.2 min=1 max=45] epsilon=0.010 loss=0.0523 replay=300,000 elapsed=00:10:59 tps=480.0 (avg 1592.6) eta=00:41:20
+[2026-07-26T21:31:31] transitions=1,100,000/5,000,000 episodes=1,449 recent_scores[mean=8.8 min=1 max=45] epsilon=0.010 loss=0.0397 replay=350,000 elapsed=00:12:42 tps=484.0 (avg 1442.5) eta=00:45:03
+[2026-07-26T21:33:15] transitions=1,150,000/5,000,000 episodes=1,551 recent_scores[mean=10.6 min=0 max=91] epsilon=0.010 loss=0.0782 replay=400,000 elapsed=00:14:26 tps=482.0 (avg 1327.4) eta=00:48:20
+[2026-07-26T21:34:59] transitions=1,200,000/5,000,000 episodes=1,643 recent_scores[mean=12.6 min=0 max=91] epsilon=0.010 loss=0.0376 replay=450,000 elapsed=00:16:10 tps=480.1 (avg 1236.5) eta=00:51:13
+[2026-07-26T21:36:43] transitions=1,250,000/5,000,000 episodes=1,740 recent_scores[mean=12.6 min=0 max=70] epsilon=0.010 loss=0.0349 replay=500,000 elapsed=00:17:53 tps=483.2 (avg 1163.9) eta=00:53:41
+[2026-07-26T21:36:43] Evaluation @ 1,250,000: scores=[20, 1, 1, 7, 2] limit=1000 ranking_key=[0, 0, 1, 6.2, 20] next_seeds=[1, 2, 3, 4, 5]
+[2026-07-26T21:36:43] Checkpoint written: ddqn_001250000.pt (and latest.pt)
+[2026-07-26T21:38:27] transitions=1,300,000/5,000,000 episodes=1,823 recent_scores[mean=13.5 min=0 max=75] epsilon=0.010 loss=0.0522 replay=500,000 elapsed=00:19:38 tps=477.5 (avg 1102.9) eta=00:55:54
+[2026-07-26T21:40:12] transitions=1,350,000/5,000,000 episodes=1,918 recent_scores[mean=13.0 min=0 max=75] epsilon=0.010 loss=0.0243 replay=500,000 elapsed=00:21:22 tps=479.4 (avg 1052.3) eta=00:57:48
+[2026-07-26T21:41:56] transitions=1,400,000/5,000,000 episodes=2,003 recent_scores[mean=13.8 min=0 max=63] epsilon=0.010 loss=0.0683 replay=500,000 elapsed=00:23:07 tps=479.7 (avg 1009.2) eta=00:59:27
+[2026-07-26T21:43:40] transitions=1,450,000/5,000,000 episodes=2,061 recent_scores[mean=15.7 min=0 max=117] epsilon=0.010 loss=0.0329 replay=500,000 elapsed=00:24:51 tps=479.1 (avg 972.1) eta=01:00:51
+[2026-07-26T21:45:24] transitions=1,500,000/5,000,000 episodes=2,131 recent_scores[mean=17.0 min=0 max=121] epsilon=0.010 loss=0.0646 replay=500,000 elapsed=00:26:35 tps=480.2 (avg 940.0) eta=01:02:03
+[2026-07-26T21:45:25] Evaluation @ 1,500,000: scores=[4, 15, 1, 7, 2] limit=1000 ranking_key=[0, 0, 1, 5.8, 15] next_seeds=[1, 2, 3, 4, 5]
+[2026-07-26T21:45:25] Checkpoint written: ddqn_001500000.pt (and latest.pt)
+[2026-07-26T21:47:09] transitions=1,550,000/5,000,000 episodes=2,193 recent_scores[mean=18.8 min=1 max=121] epsilon=0.010 loss=0.0298 replay=500,000 elapsed=00:28:20 tps=478.5 (avg 911.7) eta=01:03:04
+[2026-07-26T21:48:53] transitions=1,600,000/5,000,000 episodes=2,276 recent_scores[mean=17.6 min=0 max=121] epsilon=0.010 loss=0.0178 replay=500,000 elapsed=00:30:04 tps=480.5 (avg 886.8) eta=01:03:53
+[2026-07-26T21:50:37] transitions=1,650,000/5,000,000 episodes=2,354 recent_scores[mean=17.0 min=0 max=121] epsilon=0.010 loss=0.0171 replay=500,000 elapsed=00:31:48 tps=478.5 (avg 864.5) eta=01:04:35
+[2026-07-26T21:52:22] transitions=1,700,000/5,000,000 episodes=2,418 recent_scores[mean=17.4 min=0 max=128] epsilon=0.010 loss=0.0661 replay=500,000 elapsed=00:33:33 tps=477.6 (avg 844.3) eta=01:05:08
+[2026-07-26T21:54:07] transitions=1,750,000/5,000,000 episodes=2,484 recent_scores[mean=17.7 min=0 max=128] epsilon=0.010 loss=0.0181 replay=500,000 elapsed=00:35:18 tps=477.0 (avg 826.2) eta=01:05:33
+[2026-07-26T21:54:09] Evaluation @ 1,750,000: scores=[4, 38, 92, 7, 2] limit=1000 ranking_key=[0, 0, 2, 28.6, 92] next_seeds=[1, 2, 3, 4, 5]
+[2026-07-26T21:54:09] Checkpoint written: ddqn_001750000.pt (and latest.pt)
+[2026-07-26T21:55:54] transitions=1,800,000/5,000,000 episodes=2,536 recent_scores[mean=19.9 min=0 max=128] epsilon=0.010 loss=0.0209 replay=500,000 elapsed=00:37:05 tps=466.9 (avg 808.9) eta=01:05:56
+[2026-07-26T21:57:39] transitions=1,850,000/5,000,000 episodes=2,594 recent_scores[mean=20.4 min=0 max=128] epsilon=0.010 loss=0.0388 replay=500,000 elapsed=00:38:50 tps=477.3 (avg 794.0) eta=01:06:07
+[2026-07-26T21:59:24] transitions=1,900,000/5,000,000 episodes=2,644 recent_scores[mean=22.7 min=0 max=128] epsilon=0.010 loss=0.0013 replay=500,000 elapsed=00:40:35 tps=475.6 (avg 780.2) eta=01:06:13
+[2026-07-26T22:01:10] transitions=1,950,000/5,000,000 episodes=2,707 recent_scores[mean=22.4 min=0 max=128] epsilon=0.010 loss=0.0306 replay=500,000 elapsed=00:42:20 tps=473.3 (avg 767.5) eta=01:06:14
+[2026-07-26T22:02:55] transitions=2,000,000/5,000,000 episodes=2,761 recent_scores[mean=22.5 min=0 max=116] epsilon=0.010 loss=0.0017 replay=500,000 elapsed=00:44:06 tps=474.2 (avg 755.8) eta=01:06:09
+[2026-07-26T22:03:00] Evaluation @ 2,000,000: scores=[4, 196, 41, 7, 29] limit=1000 ranking_key=[0, 0, 4, 55.4, 196] next_seeds=[1, 2, 3, 4, 5]
+[2026-07-26T22:03:00] Checkpoint written: ddqn_002000000.pt (and latest.pt)
+[2026-07-26T22:04:45] transitions=2,050,000/5,000,000 episodes=2,826 recent_scores[mean=21.0 min=0 max=116] epsilon=0.010 loss=0.0084 replay=500,000 elapsed=00:45:56 tps=454.8 (avg 743.8) eta=01:06:06
+[2026-07-26T22:06:31] transitions=2,100,000/5,000,000 episodes=2,879 recent_scores[mean=21.5 min=0 max=116] epsilon=0.010 loss=0.0349 replay=500,000 elapsed=00:47:41 tps=473.0 (avg 733.8) eta=01:05:52
+[2026-07-26T22:08:16] transitions=2,150,000/5,000,000 episodes=2,935 recent_scores[mean=22.1 min=0 max=116] epsilon=0.010 loss=0.0132 replay=500,000 elapsed=00:49:27 tps=474.1 (avg 724.5) eta=01:05:33
+[2026-07-26T22:10:02] transitions=2,200,000/5,000,000 episodes=2,995 recent_scores[mean=21.2 min=0 max=123] epsilon=0.010 loss=0.0017 replay=500,000 elapsed=00:51:13 tps=473.0 (avg 715.9) eta=01:05:11
+[2026-07-26T22:11:48] transitions=2,250,000/5,000,000 episodes=3,053 recent_scores[mean=22.6 min=0 max=123] epsilon=0.010 loss=0.0141 replay=500,000 elapsed=00:52:59 tps=471.0 (avg 707.7) eta=01:04:45
+[2026-07-26T22:11:53] Evaluation @ 2,250,000: scores=[25, 13, 172, 7, 58] limit=1000 ranking_key=[0, 0, 7, 55.0, 172] next_seeds=[1, 2, 3, 4, 5]
+[2026-07-26T22:11:53] Checkpoint written: ddqn_002250000.pt (and latest.pt)
+[2026-07-26T22:13:38] transitions=2,300,000/5,000,000 episodes=3,108 recent_scores[mean=21.9 min=0 max=123] epsilon=0.010 loss=0.0134 replay=500,000 elapsed=00:54:49 tps=454.6 (avg 699.3) eta=01:04:21
+[2026-07-26T22:15:24] transitions=2,350,000/5,000,000 episodes=3,149 recent_scores[mean=23.9 min=0 max=110] epsilon=0.010 loss=0.0087 replay=500,000 elapsed=00:56:35 tps=472.7 (avg 692.2) eta=01:03:48
+[2026-07-26T22:17:09] transitions=2,400,000/5,000,000 episodes=3,201 recent_scores[mean=24.3 min=0 max=110] epsilon=0.010 loss=0.0128 replay=500,000 elapsed=00:58:20 tps=474.1 (avg 685.6) eta=01:03:12
+[2026-07-26T22:18:51] transitions=2,450,000/5,000,000 episodes=3,241 recent_scores[mean=26.6 min=0 max=110] epsilon=0.010 loss=0.0106 replay=500,000 elapsed=01:00:01 tps=492.6 (avg 680.2) eta=01:02:28
+[2026-07-26T22:21:19] transitions=2,500,000/5,000,000 episodes=3,285 recent_scores[mean=27.5 min=0 max=110] epsilon=0.010 loss=0.0109 replay=500,000 elapsed=01:02:29 tps=337.8 (avg 666.7) eta=01:02:29
+[2026-07-26T22:21:21] Evaluation @ 2,500,000: scores=[4, 16, 1, 92, 29] limit=1000 ranking_key=[0, 0, 1, 28.4, 92] next_seeds=[1, 2, 3, 4, 5]
+[2026-07-26T22:21:21] Checkpoint written: ddqn_002500000.pt (and latest.pt)
+[2026-07-26T22:23:44] transitions=2,550,000/5,000,000 episodes=3,327 recent_scores[mean=29.1 min=0 max=116] epsilon=0.010 loss=0.0092 replay=500,000 elapsed=01:04:55 tps=343.1 (avg 654.6) eta=01:02:22
+[2026-07-26T22:25:29] transitions=2,600,000/5,000,000 episodes=3,373 recent_scores[mean=29.1 min=0 max=144] epsilon=0.010 loss=0.0018 replay=500,000 elapsed=01:06:39 tps=480.1 (avg 650.0) eta=01:01:32
+[2026-07-26T22:27:13] transitions=2,650,000/5,000,000 episodes=3,424 recent_scores[mean=28.6 min=0 max=144] epsilon=0.010 loss=0.0089 replay=500,000 elapsed=01:08:24 tps=477.1 (avg 645.6) eta=01:00:39
+[2026-07-26T22:28:58] transitions=2,700,000/5,000,000 episodes=3,457 recent_scores[mean=28.6 min=0 max=144] epsilon=0.010 loss=0.0131 replay=500,000 elapsed=01:10:09 tps=476.0 (avg 641.4) eta=00:59:46
+[2026-07-26T22:30:43] transitions=2,750,000/5,000,000 episodes=3,487 recent_scores[mean=30.8 min=0 max=155] epsilon=0.010 loss=0.0085 replay=500,000 elapsed=01:11:54 tps=476.0 (avg 637.3) eta=00:58:50
+[2026-07-26T22:30:51] Evaluation @ 2,750,000: scores=[151, 179, 43, 12, 106] limit=1000 ranking_key=[0, 0, 12, 98.2, 179] next_seeds=[1, 2, 3, 4, 5]
+[2026-07-26T22:30:51] Checkpoint written: ddqn_002750000.pt (and latest.pt)
+[2026-07-26T22:32:36] transitions=2,800,000/5,000,000 episodes=3,530 recent_scores[mean=32.1 min=0 max=166] epsilon=0.010 loss=0.0155 replay=500,000 elapsed=01:13:47 tps=442.9 (avg 632.4) eta=00:57:58
+[2026-07-26T22:34:22] transitions=2,850,000/5,000,000 episodes=3,557 recent_scores[mean=33.8 min=0 max=166] epsilon=0.010 loss=0.0011 replay=500,000 elapsed=01:15:32 tps=474.6 (avg 628.7) eta=00:56:59
+[2026-07-26T22:36:07] transitions=2,900,000/5,000,000 episodes=3,593 recent_scores[mean=34.7 min=0 max=259] epsilon=0.010 loss=0.0017 replay=500,000 elapsed=01:17:18 tps=474.3 (avg 625.2) eta=00:55:58
+[2026-07-26T22:37:52] transitions=2,950,000/5,000,000 episodes=3,636 recent_scores[mean=37.1 min=0 max=259] epsilon=0.010 loss=0.0041 replay=500,000 elapsed=01:19:03 tps=475.8 (avg 621.9) eta=00:54:56
+[2026-07-26T22:39:38] transitions=3,000,000/5,000,000 episodes=3,664 recent_scores[mean=37.7 min=0 max=259] epsilon=0.010 loss=0.0084 replay=500,000 elapsed=01:20:49 tps=473.6 (avg 618.7) eta=00:53:52
+[2026-07-26T22:39:54] Evaluation @ 3,000,000: scores=[123, 677, 43, 55, 106] limit=1000 ranking_key=[0, 0, 43, 200.8, 677] next_seeds=[1, 2, 3, 4, 5]
+[2026-07-26T22:39:54] Checkpoint written: ddqn_003000000.pt (and latest.pt)
+[2026-07-26T22:41:39] transitions=3,050,000/5,000,000 episodes=3,700 recent_scores[mean=36.6 min=0 max=259] epsilon=0.010 loss=0.0006 replay=500,000 elapsed=01:22:49 tps=413.4 (avg 613.7) eta=00:52:57
+[2026-07-26T22:43:24] transitions=3,100,000/5,000,000 episodes=3,736 recent_scores[mean=37.1 min=0 max=259] epsilon=0.010 loss=0.0128 replay=500,000 elapsed=01:24:35 tps=474.8 (avg 610.8) eta=00:51:50
+[2026-07-26T22:45:09] transitions=3,150,000/5,000,000 episodes=3,782 recent_scores[mean=36.0 min=0 max=259] epsilon=0.010 loss=0.0236 replay=500,000 elapsed=01:26:20 tps=475.5 (avg 608.1) eta=00:50:42
+[2026-07-26T22:46:54] transitions=3,200,000/5,000,000 episodes=3,831 recent_scores[mean=31.3 min=0 max=158] epsilon=0.010 loss=0.0077 replay=500,000 elapsed=01:28:05 tps=476.0 (avg 605.4) eta=00:49:33
+[2026-07-26T22:48:40] transitions=3,250,000/5,000,000 episodes=3,874 recent_scores[mean=29.8 min=0 max=158] epsilon=0.010 loss=0.0034 replay=500,000 elapsed=01:29:51 tps=473.1 (avg 602.8) eta=00:48:22
+[2026-07-26T22:48:42] Evaluation @ 3,250,000: scores=[16, 15, 88, 1, 2] limit=1000 ranking_key=[0, 0, 1, 24.4, 88] next_seeds=[1, 2, 3, 4, 5]
+[2026-07-26T22:48:42] Checkpoint written: ddqn_003250000.pt (and latest.pt)
+[2026-07-26T22:50:27] transitions=3,300,000/5,000,000 episodes=3,908 recent_scores[mean=31.4 min=0 max=158] epsilon=0.010 loss=0.0043 replay=500,000 elapsed=01:31:38 tps=465.4 (avg 600.1) eta=00:47:12
+[2026-07-26T22:52:13] transitions=3,350,000/5,000,000 episodes=3,951 recent_scores[mean=30.3 min=0 max=158] epsilon=0.010 loss=0.0067 replay=500,000 elapsed=01:33:23 tps=475.0 (avg 597.8) eta=00:46:00
+[2026-07-26T22:53:58] transitions=3,400,000/5,000,000 episodes=4,003 recent_scores[mean=29.2 min=0 max=149] epsilon=0.010 loss=0.0180 replay=500,000 elapsed=01:35:08 tps=476.1 (avg 595.6) eta=00:44:46
+[2026-07-26T22:55:43] transitions=3,450,000/5,000,000 episodes=4,035 recent_scores[mean=31.4 min=0 max=149] epsilon=0.010 loss=0.0015 replay=500,000 elapsed=01:36:53 tps=476.3 (avg 593.4) eta=00:43:32
+[2026-07-26T22:57:28] transitions=3,500,000/5,000,000 episodes=4,065 recent_scores[mean=33.8 min=0 max=181] epsilon=0.010 loss=0.0011 replay=500,000 elapsed=01:38:39 tps=475.1 (avg 591.3) eta=00:42:16
+[2026-07-26T22:57:31] Evaluation @ 3,500,000: scores=[32, 86, 56, 18, 19] limit=1000 ranking_key=[0, 0, 18, 42.2, 86] next_seeds=[1, 2, 3, 4, 5]
+[2026-07-26T22:57:31] Checkpoint written: ddqn_003500000.pt (and latest.pt)
+[2026-07-26T22:59:17] transitions=3,550,000/5,000,000 episodes=4,103 recent_scores[mean=31.8 min=0 max=181] epsilon=0.010 loss=0.0112 replay=500,000 elapsed=01:40:27 tps=460.1 (avg 588.9) eta=00:41:02
+[2026-07-26T23:01:02] transitions=3,600,000/5,000,000 episodes=4,148 recent_scores[mean=31.7 min=0 max=209] epsilon=0.010 loss=0.0057 replay=500,000 elapsed=01:42:13 tps=474.1 (avg 587.0) eta=00:39:45
+[2026-07-26T23:02:47] transitions=3,650,000/5,000,000 episodes=4,190 recent_scores[mean=34.3 min=0 max=209] epsilon=0.010 loss=0.0080 replay=500,000 elapsed=01:43:58 tps=476.3 (avg 585.1) eta=00:38:27
+[2026-07-26T23:04:33] transitions=3,700,000/5,000,000 episodes=4,237 recent_scores[mean=32.5 min=0 max=209] epsilon=0.010 loss=0.0016 replay=500,000 elapsed=01:45:43 tps=473.8 (avg 583.3) eta=00:37:08
+[2026-07-26T23:06:18] transitions=3,750,000/5,000,000 episodes=4,277 recent_scores[mean=30.6 min=0 max=209] epsilon=0.010 loss=0.0046 replay=500,000 elapsed=01:47:28 tps=475.9 (avg 581.5) eta=00:35:49
+[2026-07-26T23:06:25] Evaluation @ 3,750,000: scores=[103, 238, 89, 7, 40] limit=1000 ranking_key=[0, 0, 7, 95.4, 238] next_seeds=[1, 2, 3, 4, 5]
+[2026-07-26T23:06:25] Checkpoint written: ddqn_003750000.pt (and latest.pt)
+[2026-07-26T23:08:10] transitions=3,800,000/5,000,000 episodes=4,322 recent_scores[mean=28.7 min=1 max=175] epsilon=0.010 loss=0.0074 replay=500,000 elapsed=01:49:21 tps=442.9 (avg 579.1) eta=00:34:32
+[2026-07-26T23:09:56] transitions=3,850,000/5,000,000 episodes=4,368 recent_scores[mean=29.2 min=0 max=134] epsilon=0.010 loss=0.0072 replay=500,000 elapsed=01:51:07 tps=474.5 (avg 577.5) eta=00:33:11
+[2026-07-26T23:11:41] transitions=3,900,000/5,000,000 episodes=4,397 recent_scores[mean=31.2 min=0 max=151] epsilon=0.010 loss=0.0330 replay=500,000 elapsed=01:52:52 tps=475.4 (avg 575.9) eta=00:31:50
+[2026-07-26T23:13:27] transitions=3,950,000/5,000,000 episodes=4,441 recent_scores[mean=31.5 min=0 max=151] epsilon=0.010 loss=0.0130 replay=500,000 elapsed=01:54:38 tps=472.6 (avg 574.3) eta=00:30:28
+[2026-07-26T23:15:12] transitions=4,000,000/5,000,000 episodes=4,486 recent_scores[mean=30.7 min=0 max=151] epsilon=0.010 loss=0.0101 replay=500,000 elapsed=01:56:23 tps=473.5 (avg 572.8) eta=00:29:05
+[2026-07-26T23:15:29] Evaluation @ 4,000,000: scores=[313, 176, 427, 60, 63] limit=1000 ranking_key=[0, 0, 60, 207.8, 427] next_seeds=[1, 2, 3, 4, 5]
+[2026-07-26T23:15:29] Checkpoint written: ddqn_004000000.pt (and latest.pt)
+[2026-07-26T23:17:15] transitions=4,050,000/5,000,000 episodes=4,513 recent_scores[mean=33.7 min=0 max=171] epsilon=0.010 loss=0.0014 replay=500,000 elapsed=01:58:26 tps=408.3 (avg 569.9) eta=00:27:46
+[2026-07-26T23:19:01] transitions=4,100,000/5,000,000 episodes=4,552 recent_scores[mean=34.0 min=0 max=271] epsilon=0.010 loss=0.0032 replay=500,000 elapsed=02:00:11 tps=472.8 (avg 568.5) eta=00:26:23
+[2026-07-26T23:20:46] transitions=4,150,000/5,000,000 episodes=4,581 recent_scores[mean=35.4 min=0 max=271] epsilon=0.010 loss=0.0087 replay=500,000 elapsed=02:01:57 tps=472.9 (avg 567.1) eta=00:24:58
+[2026-07-26T23:22:32] transitions=4,200,000/5,000,000 episodes=4,623 recent_scores[mean=34.3 min=0 max=271] epsilon=0.010 loss=0.0174 replay=500,000 elapsed=02:03:43 tps=472.1 (avg 565.8) eta=00:23:34
+[2026-07-26T23:24:18] transitions=4,250,000/5,000,000 episodes=4,660 recent_scores[mean=35.5 min=0 max=271] epsilon=0.010 loss=0.0140 replay=500,000 elapsed=02:05:29 tps=473.3 (avg 564.5) eta=00:22:08
+[2026-07-26T23:24:56] Evaluation @ 4,250,000: scores=[7, 160, 241, 1000, 1000] limit=1000 ranking_key=[1000, 2, 7, 481.6, 1000] next_seeds=[1, 2, 3, 6, 7]
+[2026-07-26T23:24:56] Checkpoint written: ddqn_004250000.pt (and latest.pt)
+[2026-07-26T23:26:42] transitions=4,300,000/5,000,000 episodes=4,692 recent_scores[mean=36.9 min=0 max=271] epsilon=0.010 loss=0.0049 replay=500,000 elapsed=02:07:52 tps=347.9 (avg 560.4) eta=00:20:49
+[2026-07-26T23:28:28] transitions=4,350,000/5,000,000 episodes=4,733 recent_scores[mean=36.5 min=0 max=271] epsilon=0.010 loss=0.0081 replay=500,000 elapsed=02:09:39 tps=469.3 (avg 559.2) eta=00:19:22
+[2026-07-26T23:30:14] transitions=4,400,000/5,000,000 episodes=4,770 recent_scores[mean=34.9 min=0 max=177] epsilon=0.010 loss=0.0006 replay=500,000 elapsed=02:11:25 tps=472.7 (avg 558.0) eta=00:17:55
+[2026-07-26T23:32:00] transitions=4,450,000/5,000,000 episodes=4,795 recent_scores[mean=35.3 min=0 max=177] epsilon=0.010 loss=0.0056 replay=500,000 elapsed=02:13:11 tps=471.5 (avg 556.9) eta=00:16:27
+[2026-07-26T23:33:46] transitions=4,500,000/5,000,000 episodes=4,838 recent_scores[mean=36.2 min=0 max=177] epsilon=0.010 loss=0.0040 replay=500,000 elapsed=02:14:57 tps=471.8 (avg 555.7) eta=00:14:59
+[2026-07-26T23:34:01] Evaluation @ 4,500,000: scores=[131, 232, 1, 535, 64] limit=2000 ranking_key=[1000, 0, 1, 192.6, 535] next_seeds=[1, 2, 3, 6, 7]
+[2026-07-26T23:34:01] Checkpoint written: ddqn_004500000.pt (and latest.pt)
+[2026-07-26T23:35:47] transitions=4,550,000/5,000,000 episodes=4,874 recent_scores[mean=36.0 min=0 max=177] epsilon=0.010 loss=0.0012 replay=500,000 elapsed=02:16:58 tps=412.8 (avg 553.6) eta=00:13:32
+[2026-07-26T23:37:33] transitions=4,600,000/5,000,000 episodes=4,916 recent_scores[mean=35.7 min=0 max=161] epsilon=0.010 loss=0.0087 replay=500,000 elapsed=02:18:44 tps=470.8 (avg 552.6) eta=00:12:03
+[2026-07-26T23:39:19] transitions=4,650,000/5,000,000 episodes=4,962 recent_scores[mean=32.3 min=0 max=161] epsilon=0.010 loss=0.0047 replay=500,000 elapsed=02:20:30 tps=471.8 (avg 551.6) eta=00:10:34
+[2026-07-26T23:41:05] transitions=4,700,000/5,000,000 episodes=5,012 recent_scores[mean=30.2 min=0 max=161] epsilon=0.010 loss=0.0066 replay=500,000 elapsed=02:22:16 tps=471.3 (avg 550.6) eta=00:09:04
+[2026-07-26T23:42:51] transitions=4,750,000/5,000,000 episodes=5,048 recent_scores[mean=29.7 min=1 max=161] epsilon=0.010 loss=0.0094 replay=500,000 elapsed=02:24:02 tps=473.6 (avg 549.6) eta=00:07:34
+[2026-07-26T23:43:01] Evaluation @ 4,750,000: scores=[151, 7, 49, 283, 182] limit=2000 ranking_key=[1000, 0, 7, 134.4, 283] next_seeds=[1, 2, 3, 6, 7]
+[2026-07-26T23:43:02] Checkpoint written: ddqn_004750000.pt (and latest.pt)
+[2026-07-26T23:44:47] transitions=4,800,000/5,000,000 episodes=5,093 recent_scores[mean=28.3 min=1 max=192] epsilon=0.010 loss=0.0014 replay=500,000 elapsed=02:25:58 tps=429.4 (avg 548.0) eta=00:06:04
+[2026-07-26T23:46:33] transitions=4,850,000/5,000,000 episodes=5,132 recent_scores[mean=29.6 min=0 max=192] epsilon=0.010 loss=0.0098 replay=500,000 elapsed=02:27:44 tps=473.0 (avg 547.1) eta=00:04:34
+[2026-07-26T23:48:19] transitions=4,900,000/5,000,000 episodes=5,183 recent_scores[mean=29.6 min=0 max=192] epsilon=0.010 loss=0.0014 replay=500,000 elapsed=02:29:30 tps=471.3 (avg 546.2) eta=00:03:03
+[2026-07-26T23:50:05] transitions=4,950,000/5,000,000 episodes=5,218 recent_scores[mean=30.7 min=0 max=192] epsilon=0.010 loss=0.0002 replay=500,000 elapsed=02:31:16 tps=470.7 (avg 545.4) eta=00:01:31
+[2026-07-26T23:51:51] transitions=5,000,000/5,000,000 episodes=5,267 recent_scores[mean=29.7 min=0 max=159] epsilon=0.010 loss=0.0034 replay=500,000 elapsed=02:33:02 tps=472.6 (avg 544.5) eta=00:00:00
+[2026-07-26T23:52:15] Evaluation @ 5,000,000: scores=[20, 120, 911, 283, 182] limit=2000 ranking_key=[1000, 0, 20, 303.2, 911] next_seeds=[1, 2, 3, 6, 7]
+[2026-07-26T23:52:15] Checkpoint written: ddqn_005000000.pt (and latest.pt)
+[2026-07-26T23:52:15] Training completed at 5,000,000 transitions in 2.56 hours.

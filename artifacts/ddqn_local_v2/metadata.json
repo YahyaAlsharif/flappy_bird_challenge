@@ -1,0 +1,2997 @@
+{
+  "algorithm": "Dueling Double DQN with Prioritized Experience Replay",
+  "run_mode": "full",
+  "experiment_name": "ddqn_local_v2",
+  "run_directory": "artifacts\\ddqn_local_v2",
+  "selected_source_model": "artifacts\\ddqn_local_v2\\best_model.pt",
+  "exported_model": "artifacts\\ddqn_local_v2\\exported_model.pt",
+  "training": {
+    "configured_budget": 5000000,
+    "actual_transitions": 5000000,
+    "duration_seconds": 9206.338402599999,
+    "best_checkpoint_step": 4250000,
+    "best_ranking_key": [
+      1000,
+      2,
+      7,
+      481.6,
+      1000
+    ],
+    "resumed_without_replay": true
+  },
+  "model_config": {
+    "state_dim": 12,
+    "action_dim": 2,
+    "hidden_dim": 192,
+    "pipe_gap": 100,
+    "learning_rate": 0.0001,
+    "gamma": 0.99,
+    "buffer_size": 500000,
+    "batch_size": 256,
+    "learning_starts": 20000,
+    "target_update_mode": "soft",
+    "target_tau": 0.005,
+    "epsilon_start": 1.0,
+    "epsilon_end": 0.01,
+    "epsilon_decay_steps": 750000,
+    "exploration_flap_probability": 0.08,
+    "per_alpha": 0.3,
+    "per_beta_start": 0.4,
+    "per_beta_end": 1.0,
+    "per_beta_steps": 5000000,
+    "n_envs": 8,
+    "gradient_steps": 1,
+    "approx_transitions_per_update": 8.0,
+    "total_transitions": 5000000,
+    "eval_interval": 250000,
+    "checkpoint_interval": 250000,
+    "reward_shaping": {
+      "survival_reward": 0.05,
+      "pipe_reward": 5.0,
+      "death_penalty": -5.0,
+      "top_penalty": -1.0,
+      "flap_cost": -0.01
+    },
+    "checkpoint_ranking_key": [
+      "highest_completed_level",
+      "slots_reaching_evaluated_limit",
+      "minimum_score",
+      "mean_score",
+      "maximum_score"
+    ]
+  },
+  "evaluation_state": {
+    "active_eval_seeds": [
+      1,
+      2,
+      3,
+      6,
+      7
+    ],
+    "next_available_eval_seed": 8,
+    "used_eval_seeds": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "retired_eval_seeds": [
+      4,
+      5
+    ],
+    "evaluation_score_limit": 2000,
+    "highest_completed_level": 1000
+  },
+  "periodic_evaluation_history": [
+    {
+      "seeds": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "score_limit": 1000,
+      "episodes": [
+        {
+          "seed": 1,
+          "score": 4,
+          "reward": 22.40000000000006,
+          "frames": 199,
+          "terminated": true,
+          "truncated": false,
+          "target_reached": false,
+          "termination_reason": "terminated"
+        },
+        {
+          "seed": 2,
+          "score": 1,
+          "reward": 8.399999999999986,
+          "frames": 86,
+          "terminated": true,
+          "truncated": false,
+          "target_reached": false,
+          "termination_reason": "terminated"
+        },
+        {
+          "seed": 3,
+          "score": 1,
+          "reward": 8.399999999999986,
+          "frames": 86,
+          "terminated": true,
+          "truncated": false,
+          "target_reached": false,
+          "termination_reason": "terminated"
+        },
+        {
+          "seed": 4,
+          "score": 22,
+          "reward": 106.39999999999854,
+          "frames": 877,
+          "terminated": true,
+          "truncated": false,
+          "target_reached": false,
+          "termination_reason": "terminated"
+        },
+        {
+          "seed": 5,
+          "score": 8,
+          "reward": 40.90000000000026,
+          "frames": 348,
+          "terminated": true,
+          "truncated": false,
+          "target_reached": false,
+          "termination_reason": "terminated"
+        }
+      ],
+      "scores": [
+        4,
+        1,
+        1,
+        22,
+        8
+      ],
+      "rewards": [
+        22.40000000000006,
+        8.399999999999986,
+        8.399999999999986,
+        106.39999999999854,
+        40.90000000000026
+      ],
+      "episode_lengths": [
+        199,
+        86,
+        86,
+        877,
+        348
+      ],
+      "terminations": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "truncations": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "target_reached_flags": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "mean_score": 7.2,
+      "median_score": 4.0,
+      "std_score": 7.833262411026456,
+      "minimum_score": 1,
+      "maximum_score": 22,
+      "reached_limit_count": 0,
+      "state_before": {
+        "active_eval_seeds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "next_available_eval_seed": 6,
+        "used_eval_seeds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "retired_eval_seeds": [],
+        "evaluation_score_limit": 1000,
+        "highest_completed_level": 0
+      },
+      "state_after": {
+        "active_eval_seeds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "next_available_eval_seed": 6,
+        "used_eval_seeds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "retired_eval_seeds": [],
+        "evaluation_score_limit": 1000,
+        "highest_completed_level": 0
+      },
+      "successful_slots": [],
+      "replacement_seeds_by_slot": {},
+      "evaluated_score_limit": 1000,
+      "scheduled_training_step": 1000000,
+      "actual_training_step": 1000000,
+      "ranking_key": [
+        0,
+        0,
+        1,
+        7.2,
+        22
+      ]
+    },
+    {
+      "seeds": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "score_limit": 1000,
+      "episodes": [
+        {
+          "seed": 1,
+          "score": 20,
+          "reward": 96.89999999999897,
+          "frames": 800,
+          "terminated": true,
+          "truncated": false,
+          "target_reached": false,
+          "termination_reason": "terminated"
+        },
+        {
+          "seed": 2,
+          "score": 1,
+          "reward": 8.399999999999986,
+          "frames": 86,
+          "terminated": true,
+          "truncated": false,
+          "target_reached": false,
+          "termination_reason": "terminated"
+        },
+        {
+          "seed": 3,
+          "score": 1,
+          "reward": 8.399999999999986,
+          "frames": 86,
+          "terminated": true,
+          "truncated": false,
+          "target_reached": false,
+          "termination_reason": "terminated"
+        },
+        {
+          "seed": 4,
+          "score": 7,
+          "reward": 36.40000000000021,
+          "frames": 312,
+          "terminated": true,
+          "truncated": false,
+          "target_reached": false,
+          "termination_reason": "terminated"
+        },
+        {
+          "seed": 5,
+          "score": 2,
+          "reward": 12.899999999999974,
+          "frames": 122,
+          "terminated": true,
+          "truncated": false,
+          "target_reached": false,
+          "termination_reason": "terminated"
+        }
+      ],
+      "scores": [
+        20,
+        1,
+        1,
+        7,
+        2
+      ],
+      "rewards": [
+        96.89999999999897,
+        8.399999999999986,
+        8.399999999999986,
+        36.40000000000021,
+        12.899999999999974
+      ],
+      "episode_lengths": [
+        800,
+        86,
+        86,
+        312,
+        122
+      ],
+      "terminations": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "truncations": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "target_reached_flags": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "mean_score": 6.2,
+      "median_score": 2.0,
+      "std_score": 7.249827584156743,
+      "minimum_score": 1,
+      "maximum_score": 20,
+      "reached_limit_count": 0,
+      "state_before": {
+        "active_eval_seeds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "next_available_eval_seed": 6,
+        "used_eval_seeds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "retired_eval_seeds": [],
+        "evaluation_score_limit": 1000,
+        "highest_completed_level": 0
+      },
+      "state_after": {
+        "active_eval_seeds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "next_available_eval_seed": 6,
+        "used_eval_seeds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "retired_eval_seeds": [],
+        "evaluation_score_limit": 1000,
+        "highest_completed_level": 0
+      },
+      "successful_slots": [],
+      "replacement_seeds_by_slot": {},
+      "evaluated_score_limit": 1000,
+      "scheduled_training_step": 1250000,
+      "actual_training_step": 1250000,
+      "ranking_key": [
+        0,
+        0,
+        1,
+        6.2,
+        20
+      ]
+    },
+    {
+      "seeds": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "score_limit": 1000,
+      "episodes": [
+        {
+          "seed": 1,
+          "score": 4,
+          "reward": 22.40000000000006,
+          "frames": 199,
+          "terminated": true,
+          "truncated": false,
+          "target_reached": false,
+          "termination_reason": "terminated"
+        },
+        {
+          "seed": 2,
+          "score": 15,
+          "reward": 73.89999999999999,
+          "frames": 615,
+          "terminated": true,
+          "truncated": false,
+          "target_reached": false,
+          "termination_reason": "terminated"
+        },
+        {
+          "seed": 3,
+          "score": 1,
+          "reward": 8.399999999999986,
+          "frames": 86,
+          "terminated": true,
+          "truncated": false,
+          "target_reached": false,
+          "termination_reason": "terminated"
+        },
+        {
+          "seed": 4,
+          "score": 7,
+          "reward": 36.40000000000021,
+          "frames": 312,
+          "terminated": true,
+          "truncated": false,
+          "target_reached": false,
+          "termination_reason": "terminated"
+        },
+        {
+          "seed": 5,
+          "score": 2,
+          "reward": 12.899999999999974,
+          "frames": 122,
+          "terminated": true,
+          "truncated": false,
+          "target_reached": false,
+          "termination_reason": "terminated"
+        }
+      ],
+      "scores": [
+        4,
+        15,
+        1,
+        7,
+        2
+      ],
+      "rewards": [
+        22.40000000000006,
+        73.89999999999999,
+        8.399999999999986,
+        36.40000000000021,
+        12.899999999999974
+      ],
+      "episode_lengths": [
+        199,
+        615,
+        86,
+        312,
+        122
+      ],
+      "terminations": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "truncations": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "target_reached_flags": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "mean_score": 5.8,
+      "median_score": 4.0,
+      "std_score": 5.035871324805668,
+      "minimum_score": 1,
+      "maximum_score": 15,
+      "reached_limit_count": 0,
+      "state_before": {
+        "active_eval_seeds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "next_available_eval_seed": 6,
+        "used_eval_seeds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "retired_eval_seeds": [],
+        "evaluation_score_limit": 1000,
+        "highest_completed_level": 0
+      },
+      "state_after": {
+        "active_eval_seeds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "next_available_eval_seed": 6,
+        "used_eval_seeds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "retired_eval_seeds": [],
+        "evaluation_score_limit": 1000,
+        "highest_completed_level": 0
+      },
+      "successful_slots": [],
+      "replacement_seeds_by_slot": {},
+      "evaluated_score_limit": 1000,
+      "scheduled_training_step": 1500000,
+      "actual_training_step": 1500000,
+      "ranking_key": [
+        0,
+        0,
+        1,
+        5.8,
+        15
+      ]
+    },
+    {
+      "seeds": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "score_limit": 1000,
+      "episodes": [
+        {
+          "seed": 1,
+          "score": 4,
+          "reward": 22.40000000000006,
+          "frames": 199,
+          "terminated": true,
+          "truncated": false,
+          "target_reached": false,
+          "termination_reason": "terminated"
+        },
+        {
+          "seed": 2,
+          "score": 38,
+          "reward": 180.8999999999952,
+          "frames": 1478,
+          "terminated": true,
+          "truncated": false,
+          "target_reached": false,
+          "termination_reason": "terminated"
+        },
+        {
+          "seed": 3,
+          "score": 92,
+          "reward": 432.9000000000237,
+          "frames": 3512,
+          "terminated": true,
+          "truncated": false,
+          "target_reached": false,
+          "termination_reason": "terminated"
+        },
+        {
+          "seed": 4,
+          "score": 7,
+          "reward": 36.40000000000021,
+          "frames": 312,
+          "terminated": true,
+          "truncated": false,
+          "target_reached": false,
+          "termination_reason": "terminated"
+        },
+        {
+          "seed": 5,
+          "score": 2,
+          "reward": 12.899999999999974,
+          "frames": 122,
+          "terminated": true,
+          "truncated": false,
+          "target_reached": false,
+          "termination_reason": "terminated"
+        }
+      ],
+      "scores": [
+        4,
+        38,
+        92,
+        7,
+        2
+      ],
+      "rewards": [
+        22.40000000000006,
+        180.8999999999952,
+        432.9000000000237,
+        36.40000000000021,
+        12.899999999999974
+      ],
+      "episode_lengths": [
+        199,
+        1478,
+        3512,
+        312,
+        122
+      ],
+      "terminations": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "truncations": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "target_reached_flags": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "mean_score": 28.6,
+      "median_score": 7.0,
+      "std_score": 34.313845602030675,
+      "minimum_score": 2,
+      "maximum_score": 92,
+      "reached_limit_count": 0,
+      "state_before": {
+        "active_eval_seeds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "next_available_eval_seed": 6,
+        "used_eval_seeds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "retired_eval_seeds": [],
+        "evaluation_score_limit": 1000,
+        "highest_completed_level": 0
+      },
+      "state_after": {
+        "active_eval_seeds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "next_available_eval_seed": 6,
+        "used_eval_seeds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "retired_eval_seeds": [],
+        "evaluation_score_limit": 1000,
+        "highest_completed_level": 0
+      },
+      "successful_slots": [],
+      "replacement_seeds_by_slot": {},
+      "evaluated_score_limit": 1000,
+      "scheduled_training_step": 1750000,
+      "actual_training_step": 1750000,
+      "ranking_key": [
+        0,
+        0,
+        2,
+        28.6,
+        92
+      ]
+    },
+    {
+      "seeds": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "score_limit": 1000,
+      "episodes": [
+        {
+          "seed": 1,
+          "score": 4,
+          "reward": 22.40000000000006,
+          "frames": 199,
+          "terminated": true,
+          "truncated": false,
+          "target_reached": false,
+          "termination_reason": "terminated"
+        },
+        {
+          "seed": 2,
+          "score": 196,
+          "reward": 918.4000000001104,
+          "frames": 7431,
+          "terminated": true,
+          "truncated": false,
+          "target_reached": false,
+          "termination_reason": "terminated"
+        },
+        {
+          "seed": 3,
+          "score": 41,
+          "reward": 194.89999999999458,
+          "frames": 1591,
+          "terminated": true,
+          "truncated": false,
+          "target_reached": false,
+          "termination_reason": "terminated"
+        },
+        {
+          "seed": 4,
+          "score": 7,
+          "reward": 36.40000000000021,
+          "frames": 312,
+          "terminated": true,
+          "truncated": false,
+          "target_reached": false,
+          "termination_reason": "terminated"
+        },
+        {
+          "seed": 5,
+          "score": 29,
+          "reward": 138.89999999999708,
+          "frames": 1139,
+          "terminated": true,
+          "truncated": false,
+          "target_reached": false,
+          "termination_reason": "terminated"
+        }
+      ],
+      "scores": [
+        4,
+        196,
+        41,
+        7,
+        29
+      ],
+      "rewards": [
+        22.40000000000006,
+        918.4000000001104,
+        194.89999999999458,
+        36.40000000000021,
+        138.89999999999708
+      ],
+      "episode_lengths": [
+        199,
+        7431,
+        1591,
+        312,
+        1139
+      ],
+      "terminations": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "truncations": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "target_reached_flags": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "mean_score": 55.4,
+      "median_score": 29.0,
+      "std_score": 71.63407010633976,
+      "minimum_score": 4,
+      "maximum_score": 196,
+      "reached_limit_count": 0,
+      "state_before": {
+        "active_eval_seeds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "next_available_eval_seed": 6,
+        "used_eval_seeds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "retired_eval_seeds": [],
+        "evaluation_score_limit": 1000,
+        "highest_completed_level": 0
+      },
+      "state_after": {
+        "active_eval_seeds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "next_available_eval_seed": 6,
+        "used_eval_seeds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "retired_eval_seeds": [],
+        "evaluation_score_limit": 1000,
+        "highest_completed_level": 0
+      },
+      "successful_slots": [],
+      "replacement_seeds_by_slot": {},
+      "evaluated_score_limit": 1000,
+      "scheduled_training_step": 2000000,
+      "actual_training_step": 2000000,
+      "ranking_key": [
+        0,
+        0,
+        4,
+        55.4,
+        196
+      ]
+    },
+    {
+      "seeds": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "score_limit": 1000,
+      "episodes": [
+        {
+          "seed": 1,
+          "score": 25,
+          "reward": 120.39999999999792,
+          "frames": 990,
+          "terminated": true,
+          "truncated": false,
+          "target_reached": false,
+          "termination_reason": "terminated"
+        },
+        {
+          "seed": 2,
+          "score": 13,
+          "reward": 64.40000000000042,
+          "frames": 538,
+          "terminated": true,
+          "truncated": false,
+          "target_reached": false,
+          "termination_reason": "terminated"
+        },
+        {
+          "seed": 3,
+          "score": 172,
+          "reward": 806.4000000000904,
+          "frames": 6527,
+          "terminated": true,
+          "truncated": false,
+          "target_reached": false,
+          "termination_reason": "terminated"
+        },
+        {
+          "seed": 4,
+          "score": 7,
+          "reward": 36.40000000000021,
+          "frames": 312,
+          "terminated": true,
+          "truncated": false,
+          "target_reached": false,
+          "termination_reason": "terminated"
+        },
+        {
+          "seed": 5,
+          "score": 58,
+          "reward": 274.3999999999954,
+          "frames": 2233,
+          "terminated": true,
+          "truncated": false,
+          "target_reached": false,
+          "termination_reason": "terminated"
+        }
+      ],
+      "scores": [
+        25,
+        13,
+        172,
+        7,
+        58
+      ],
+      "rewards": [
+        120.39999999999792,
+        64.40000000000042,
+        806.4000000000904,
+        36.40000000000021,
+        274.3999999999954
+      ],
+      "episode_lengths": [
+        990,
+        538,
+        6527,
+        312,
+        2233
+      ],
+      "terminations": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "truncations": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "target_reached_flags": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "mean_score": 55.0,
+      "median_score": 25.0,
+      "std_score": 61.09991816688464,
+      "minimum_score": 7,
+      "maximum_score": 172,
+      "reached_limit_count": 0,
+      "state_before": {
+        "active_eval_seeds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "next_available_eval_seed": 6,
+        "used_eval_seeds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "retired_eval_seeds": [],
+        "evaluation_score_limit": 1000,
+        "highest_completed_level": 0
+      },
+      "state_after": {
+        "active_eval_seeds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "next_available_eval_seed": 6,
+        "used_eval_seeds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "retired_eval_seeds": [],
+        "evaluation_score_limit": 1000,
+        "highest_completed_level": 0
+      },
+      "successful_slots": [],
+      "replacement_seeds_by_slot": {},
+      "evaluated_score_limit": 1000,
+      "scheduled_training_step": 2250000,
+      "actual_training_step": 2250000,
+      "ranking_key": [
+        0,
+        0,
+        7,
+        55.0,
+        172
+      ]
+    },
+    {
+      "seeds": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "score_limit": 1000,
+      "episodes": [
+        {
+          "seed": 1,
+          "score": 4,
+          "reward": 22.40000000000006,
+          "frames": 199,
+          "terminated": true,
+          "truncated": false,
+          "target_reached": false,
+          "termination_reason": "terminated"
+        },
+        {
+          "seed": 2,
+          "score": 16,
+          "reward": 76.79999999999988,
+          "frames": 635,
+          "terminated": true,
+          "truncated": false,
+          "target_reached": false,
+          "termination_reason": "terminated"
+        },
+        {
+          "seed": 3,
+          "score": 1,
+          "reward": 8.399999999999986,
+          "frames": 86,
+          "terminated": true,
+          "truncated": false,
+          "target_reached": false,
+          "termination_reason": "terminated"
+        },
+        {
+          "seed": 4,
+          "score": 92,
+          "reward": 431.3000000000233,
+          "frames": 3496,
+          "terminated": true,
+          "truncated": false,
+          "target_reached": false,
+          "termination_reason": "terminated"
+        },
+        {
+          "seed": 5,
+          "score": 29,
+          "reward": 137.29999999999717,
+          "frames": 1123,
+          "terminated": true,
+          "truncated": false,
+          "target_reached": false,
+          "termination_reason": "terminated"
+        }
+      ],
+      "scores": [
+        4,
+        16,
+        1,
+        92,
+        29
+      ],
+      "rewards": [
+        22.40000000000006,
+        76.79999999999988,
+        8.399999999999986,
+        431.3000000000233,
+        137.29999999999717
+      ],
+      "episode_lengths": [
+        199,
+        635,
+        86,
+        3496,
+        1123
+      ],
+      "terminations": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "truncations": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "target_reached_flags": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "mean_score": 28.4,
+      "median_score": 16.0,
+      "std_score": 33.302252176091635,
+      "minimum_score": 1,
+      "maximum_score": 92,
+      "reached_limit_count": 0,
+      "state_before": {
+        "active_eval_seeds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "next_available_eval_seed": 6,
+        "used_eval_seeds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "retired_eval_seeds": [],
+        "evaluation_score_limit": 1000,
+        "highest_completed_level": 0
+      },
+      "state_after": {
+        "active_eval_seeds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "next_available_eval_seed": 6,
+        "used_eval_seeds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "retired_eval_seeds": [],
+        "evaluation_score_limit": 1000,
+        "highest_completed_level": 0
+      },
+      "successful_slots": [],
+      "replacement_seeds_by_slot": {},
+      "evaluated_score_limit": 1000,
+      "scheduled_training_step": 2500000,
+      "actual_training_step": 2500000,
+      "ranking_key": [
+        0,
+        0,
+        1,
+        28.4,
+        92
+      ]
+    },
+    {
+      "seeds": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "score_limit": 1000,
+      "episodes": [
+        {
+          "seed": 1,
+          "score": 151,
+          "reward": 708.4000000000729,
+          "frames": 5736,
+          "terminated": true,
+          "truncated": false,
+          "target_reached": false,
+          "termination_reason": "terminated"
+        },
+        {
+          "seed": 2,
+          "score": 179,
+          "reward": 838.9000000000962,
+          "frames": 6789,
+          "terminated": true,
+          "truncated": false,
+          "target_reached": false,
+          "termination_reason": "terminated"
+        },
+        {
+          "seed": 3,
+          "score": 43,
+          "reward": 204.39999999999415,
+          "frames": 1668,
+          "terminated": true,
+          "truncated": false,
+          "target_reached": false,
+          "termination_reason": "terminated"
+        },
+        {
+          "seed": 4,
+          "score": 12,
+          "reward": 57.100000000000435,
+          "frames": 474,
+          "terminated": true,
+          "truncated": false,
+          "target_reached": false,
+          "termination_reason": "terminated"
+        },
+        {
+          "seed": 5,
+          "score": 106,
+          "reward": 498.4000000000354,
+          "frames": 4041,
+          "terminated": true,
+          "truncated": false,
+          "target_reached": false,
+          "termination_reason": "terminated"
+        }
+      ],
+      "scores": [
+        151,
+        179,
+        43,
+        12,
+        106
+      ],
+      "rewards": [
+        708.4000000000729,
+        838.9000000000962,
+        204.39999999999415,
+        57.100000000000435,
+        498.4000000000354
+      ],
+      "episode_lengths": [
+        5736,
+        6789,
+        1668,
+        474,
+        4041
+      ],
+      "terminations": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "truncations": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "target_reached_flags": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "mean_score": 98.2,
+      "median_score": 106.0,
+      "std_score": 63.015553635590635,
+      "minimum_score": 12,
+      "maximum_score": 179,
+      "reached_limit_count": 0,
+      "state_before": {
+        "active_eval_seeds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "next_available_eval_seed": 6,
+        "used_eval_seeds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "retired_eval_seeds": [],
+        "evaluation_score_limit": 1000,
+        "highest_completed_level": 0
+      },
+      "state_after": {
+        "active_eval_seeds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "next_available_eval_seed": 6,
+        "used_eval_seeds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "retired_eval_seeds": [],
+        "evaluation_score_limit": 1000,
+        "highest_completed_level": 0
+      },
+      "successful_slots": [],
+      "replacement_seeds_by_slot": {},
+      "evaluated_score_limit": 1000,
+      "scheduled_training_step": 2750000,
+      "actual_training_step": 2750000,
+      "ranking_key": [
+        0,
+        0,
+        12,
+        98.2,
+        179
+      ]
+    },
+    {
+      "seeds": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "score_limit": 1000,
+      "episodes": [
+        {
+          "seed": 1,
+          "score": 123,
+          "reward": 577.9000000000495,
+          "frames": 4683,
+          "terminated": true,
+          "truncated": false,
+          "target_reached": false,
+          "termination_reason": "terminated"
+        },
+        {
+          "seed": 2,
+          "score": 677,
+          "reward": 3162.8999999985995,
+          "frames": 25547,
+          "terminated": true,
+          "truncated": false,
+          "target_reached": false,
+          "termination_reason": "terminated"
+        },
+        {
+          "seed": 3,
+          "score": 43,
+          "reward": 204.39999999999415,
+          "frames": 1668,
+          "terminated": true,
+          "truncated": false,
+          "target_reached": false,
+          "termination_reason": "terminated"
+        },
+        {
+          "seed": 4,
+          "score": 55,
+          "reward": 260.3999999999929,
+          "frames": 2120,
+          "terminated": true,
+          "truncated": false,
+          "target_reached": false,
+          "termination_reason": "terminated"
+        },
+        {
+          "seed": 5,
+          "score": 106,
+          "reward": 498.4000000000354,
+          "frames": 4041,
+          "terminated": true,
+          "truncated": false,
+          "target_reached": false,
+          "termination_reason": "terminated"
+        }
+      ],
+      "scores": [
+        123,
+        677,
+        43,
+        55,
+        106
+      ],
+      "rewards": [
+        577.9000000000495,
+        3162.8999999985995,
+        204.39999999999415,
+        260.3999999999929,
+        498.4000000000354
+      ],
+      "episode_lengths": [
+        4683,
+        25547,
+        1668,
+        2120,
+        4041
+      ],
+      "terminations": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "truncations": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "target_reached_flags": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "mean_score": 200.8,
+      "median_score": 106.0,
+      "std_score": 239.9853328851578,
+      "minimum_score": 43,
+      "maximum_score": 677,
+      "reached_limit_count": 0,
+      "state_before": {
+        "active_eval_seeds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "next_available_eval_seed": 6,
+        "used_eval_seeds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "retired_eval_seeds": [],
+        "evaluation_score_limit": 1000,
+        "highest_completed_level": 0
+      },
+      "state_after": {
+        "active_eval_seeds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "next_available_eval_seed": 6,
+        "used_eval_seeds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "retired_eval_seeds": [],
+        "evaluation_score_limit": 1000,
+        "highest_completed_level": 0
+      },
+      "successful_slots": [],
+      "replacement_seeds_by_slot": {},
+      "evaluated_score_limit": 1000,
+      "scheduled_training_step": 3000000,
+      "actual_training_step": 3000000,
+      "ranking_key": [
+        0,
+        0,
+        43,
+        200.8,
+        677
+      ]
+    },
+    {
+      "seeds": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "score_limit": 1000,
+      "episodes": [
+        {
+          "seed": 1,
+          "score": 16,
+          "reward": 78.39999999999979,
+          "frames": 651,
+          "terminated": true,
+          "truncated": false,
+          "target_reached": false,
+          "termination_reason": "terminated"
+        },
+        {
+          "seed": 2,
+          "score": 15,
+          "reward": 73.89999999999999,
+          "frames": 615,
+          "terminated": true,
+          "truncated": false,
+          "target_reached": false,
+          "termination_reason": "terminated"
+        },
+        {
+          "seed": 3,
+          "score": 88,
+          "reward": 414.4000000000204,
+          "frames": 3363,
+          "terminated": true,
+          "truncated": false,
+          "target_reached": false,
+          "termination_reason": "terminated"
+        },
+        {
+          "seed": 4,
+          "score": 1,
+          "reward": 8.399999999999986,
+          "frames": 86,
+          "terminated": true,
+          "truncated": false,
+          "target_reached": false,
+          "termination_reason": "terminated"
+        },
+        {
+          "seed": 5,
+          "score": 2,
+          "reward": 12.899999999999974,
+          "frames": 122,
+          "terminated": true,
+          "truncated": false,
+          "target_reached": false,
+          "termination_reason": "terminated"
+        }
+      ],
+      "scores": [
+        16,
+        15,
+        88,
+        1,
+        2
+      ],
+      "rewards": [
+        78.39999999999979,
+        73.89999999999999,
+        414.4000000000204,
+        8.399999999999986,
+        12.899999999999974
+      ],
+      "episode_lengths": [
+        651,
+        615,
+        3363,
+        86,
+        122
+      ],
+      "terminations": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "truncations": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "target_reached_flags": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "mean_score": 24.4,
+      "median_score": 15.0,
+      "std_score": 32.41357740207027,
+      "minimum_score": 1,
+      "maximum_score": 88,
+      "reached_limit_count": 0,
+      "state_before": {
+        "active_eval_seeds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "next_available_eval_seed": 6,
+        "used_eval_seeds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "retired_eval_seeds": [],
+        "evaluation_score_limit": 1000,
+        "highest_completed_level": 0
+      },
+      "state_after": {
+        "active_eval_seeds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "next_available_eval_seed": 6,
+        "used_eval_seeds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "retired_eval_seeds": [],
+        "evaluation_score_limit": 1000,
+        "highest_completed_level": 0
+      },
+      "successful_slots": [],
+      "replacement_seeds_by_slot": {},
+      "evaluated_score_limit": 1000,
+      "scheduled_training_step": 3250000,
+      "actual_training_step": 3250000,
+      "ranking_key": [
+        0,
+        0,
+        1,
+        24.4,
+        88
+      ]
+    },
+    {
+      "seeds": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "score_limit": 1000,
+      "episodes": [
+        {
+          "seed": 1,
+          "score": 32,
+          "reward": 152.89999999999645,
+          "frames": 1252,
+          "terminated": true,
+          "truncated": false,
+          "target_reached": false,
+          "termination_reason": "terminated"
+        },
+        {
+          "seed": 2,
+          "score": 86,
+          "reward": 403.2000000000183,
+          "frames": 3269,
+          "terminated": true,
+          "truncated": false,
+          "target_reached": false,
+          "termination_reason": "terminated"
+        },
+        {
+          "seed": 3,
+          "score": 56,
+          "reward": 263.1999999999933,
+          "frames": 2139,
+          "terminated": true,
+          "truncated": false,
+          "target_reached": false,
+          "termination_reason": "terminated"
+        },
+        {
+          "seed": 4,
+          "score": 18,
+          "reward": 85.79999999999949,
+          "frames": 707,
+          "terminated": true,
+          "truncated": false,
+          "target_reached": false,
+          "termination_reason": "terminated"
+        },
+        {
+          "seed": 5,
+          "score": 19,
+          "reward": 92.39999999999917,
+          "frames": 764,
+          "terminated": true,
+          "truncated": false,
+          "target_reached": false,
+          "termination_reason": "terminated"
+        }
+      ],
+      "scores": [
+        32,
+        86,
+        56,
+        18,
+        19
+      ],
+      "rewards": [
+        152.89999999999645,
+        403.2000000000183,
+        263.1999999999933,
+        85.79999999999949,
+        92.39999999999917
+      ],
+      "episode_lengths": [
+        1252,
+        3269,
+        2139,
+        707,
+        764
+      ],
+      "terminations": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "truncations": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "target_reached_flags": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "mean_score": 42.2,
+      "median_score": 32.0,
+      "std_score": 25.833311827948037,
+      "minimum_score": 18,
+      "maximum_score": 86,
+      "reached_limit_count": 0,
+      "state_before": {
+        "active_eval_seeds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "next_available_eval_seed": 6,
+        "used_eval_seeds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "retired_eval_seeds": [],
+        "evaluation_score_limit": 1000,
+        "highest_completed_level": 0
+      },
+      "state_after": {
+        "active_eval_seeds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "next_available_eval_seed": 6,
+        "used_eval_seeds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "retired_eval_seeds": [],
+        "evaluation_score_limit": 1000,
+        "highest_completed_level": 0
+      },
+      "successful_slots": [],
+      "replacement_seeds_by_slot": {},
+      "evaluated_score_limit": 1000,
+      "scheduled_training_step": 3500000,
+      "actual_training_step": 3500000,
+      "ranking_key": [
+        0,
+        0,
+        18,
+        42.2,
+        86
+      ]
+    },
+    {
+      "seeds": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "score_limit": 1000,
+      "episodes": [
+        {
+          "seed": 1,
+          "score": 103,
+          "reward": 484.4000000000329,
+          "frames": 3928,
+          "terminated": true,
+          "truncated": false,
+          "target_reached": false,
+          "termination_reason": "terminated"
+        },
+        {
+          "seed": 2,
+          "score": 238,
+          "reward": 1114.4000000000633,
+          "frames": 9013,
+          "terminated": true,
+          "truncated": false,
+          "target_reached": false,
+          "termination_reason": "terminated"
+        },
+        {
+          "seed": 3,
+          "score": 89,
+          "reward": 418.9000000000212,
+          "frames": 3399,
+          "terminated": true,
+          "truncated": false,
+          "target_reached": false,
+          "termination_reason": "terminated"
+        },
+        {
+          "seed": 4,
+          "score": 7,
+          "reward": 36.40000000000021,
+          "frames": 312,
+          "terminated": true,
+          "truncated": false,
+          "target_reached": false,
+          "termination_reason": "terminated"
+        },
+        {
+          "seed": 5,
+          "score": 40,
+          "reward": 190.39999999999478,
+          "frames": 1555,
+          "terminated": true,
+          "truncated": false,
+          "target_reached": false,
+          "termination_reason": "terminated"
+        }
+      ],
+      "scores": [
+        103,
+        238,
+        89,
+        7,
+        40
+      ],
+      "rewards": [
+        484.4000000000329,
+        1114.4000000000633,
+        418.9000000000212,
+        36.40000000000021,
+        190.39999999999478
+      ],
+      "episode_lengths": [
+        3928,
+        9013,
+        3399,
+        312,
+        1555
+      ],
+      "terminations": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "truncations": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "target_reached_flags": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "mean_score": 95.4,
+      "median_score": 89.0,
+      "std_score": 79.14189787969454,
+      "minimum_score": 7,
+      "maximum_score": 238,
+      "reached_limit_count": 0,
+      "state_before": {
+        "active_eval_seeds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "next_available_eval_seed": 6,
+        "used_eval_seeds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "retired_eval_seeds": [],
+        "evaluation_score_limit": 1000,
+        "highest_completed_level": 0
+      },
+      "state_after": {
+        "active_eval_seeds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "next_available_eval_seed": 6,
+        "used_eval_seeds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "retired_eval_seeds": [],
+        "evaluation_score_limit": 1000,
+        "highest_completed_level": 0
+      },
+      "successful_slots": [],
+      "replacement_seeds_by_slot": {},
+      "evaluated_score_limit": 1000,
+      "scheduled_training_step": 3750000,
+      "actual_training_step": 3750000,
+      "ranking_key": [
+        0,
+        0,
+        7,
+        95.4,
+        238
+      ]
+    },
+    {
+      "seeds": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "score_limit": 1000,
+      "episodes": [
+        {
+          "seed": 1,
+          "score": 313,
+          "reward": 1462.7999999998146,
+          "frames": 11822,
+          "terminated": true,
+          "truncated": false,
+          "target_reached": false,
+          "termination_reason": "terminated"
+        },
+        {
+          "seed": 2,
+          "score": 176,
+          "reward": 824.9000000000937,
+          "frames": 6676,
+          "terminated": true,
+          "truncated": false,
+          "target_reached": false,
+          "termination_reason": "terminated"
+        },
+        {
+          "seed": 3,
+          "score": 427,
+          "reward": 1996.399999999433,
+          "frames": 16132,
+          "terminated": true,
+          "truncated": false,
+          "target_reached": false,
+          "termination_reason": "terminated"
+        },
+        {
+          "seed": 4,
+          "score": 60,
+          "reward": 281.7999999999966,
+          "frames": 2289,
+          "terminated": true,
+          "truncated": false,
+          "target_reached": false,
+          "termination_reason": "terminated"
+        },
+        {
+          "seed": 5,
+          "score": 63,
+          "reward": 297.8999999999996,
+          "frames": 2423,
+          "terminated": true,
+          "truncated": false,
+          "target_reached": false,
+          "termination_reason": "terminated"
+        }
+      ],
+      "scores": [
+        313,
+        176,
+        427,
+        60,
+        63
+      ],
+      "rewards": [
+        1462.7999999998146,
+        824.9000000000937,
+        1996.399999999433,
+        281.7999999999966,
+        297.8999999999996
+      ],
+      "episode_lengths": [
+        11822,
+        6676,
+        16132,
+        2289,
+        2423
+      ],
+      "terminations": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "truncations": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "target_reached_flags": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "mean_score": 207.8,
+      "median_score": 176.0,
+      "std_score": 143.4843545478043,
+      "minimum_score": 60,
+      "maximum_score": 427,
+      "reached_limit_count": 0,
+      "state_before": {
+        "active_eval_seeds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "next_available_eval_seed": 6,
+        "used_eval_seeds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "retired_eval_seeds": [],
+        "evaluation_score_limit": 1000,
+        "highest_completed_level": 0
+      },
+      "state_after": {
+        "active_eval_seeds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "next_available_eval_seed": 6,
+        "used_eval_seeds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "retired_eval_seeds": [],
+        "evaluation_score_limit": 1000,
+        "highest_completed_level": 0
+      },
+      "successful_slots": [],
+      "replacement_seeds_by_slot": {},
+      "evaluated_score_limit": 1000,
+      "scheduled_training_step": 4000000,
+      "actual_training_step": 4000000,
+      "ranking_key": [
+        0,
+        0,
+        60,
+        207.8,
+        427
+      ]
+    },
+    {
+      "seeds": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "score_limit": 1000,
+      "episodes": [
+        {
+          "seed": 1,
+          "score": 7,
+          "reward": 36.40000000000021,
+          "frames": 312,
+          "terminated": true,
+          "truncated": false,
+          "target_reached": false,
+          "termination_reason": "terminated"
+        },
+        {
+          "seed": 2,
+          "score": 160,
+          "reward": 748.80000000008,
+          "frames": 6059,
+          "terminated": true,
+          "truncated": false,
+          "target_reached": false,
+          "termination_reason": "terminated"
+        },
+        {
+          "seed": 3,
+          "score": 241,
+          "reward": 1126.8000000000548,
+          "frames": 9110,
+          "terminated": true,
+          "truncated": false,
+          "target_reached": false,
+          "termination_reason": "terminated"
+        },
+        {
+          "seed": 4,
+          "score": 1000,
+          "reward": 4669.099999999571,
+          "frames": 37691,
+          "terminated": false,
+          "truncated": true,
+          "target_reached": true,
+          "termination_reason": "target reached"
+        },
+        {
+          "seed": 5,
+          "score": 1000,
+          "reward": 4669.099999999571,
+          "frames": 37691,
+          "terminated": false,
+          "truncated": true,
+          "target_reached": true,
+          "termination_reason": "target reached"
+        }
+      ],
+      "scores": [
+        7,
+        160,
+        241,
+        1000,
+        1000
+      ],
+      "rewards": [
+        36.40000000000021,
+        748.80000000008,
+        1126.8000000000548,
+        4669.099999999571,
+        4669.099999999571
+      ],
+      "episode_lengths": [
+        312,
+        6059,
+        9110,
+        37691,
+        37691
+      ],
+      "terminations": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "truncations": [
+        false,
+        false,
+        false,
+        true,
+        true
+      ],
+      "target_reached_flags": [
+        false,
+        false,
+        false,
+        true,
+        true
+      ],
+      "mean_score": 481.6,
+      "median_score": 241.0,
+      "std_score": 429.89235862015505,
+      "minimum_score": 7,
+      "maximum_score": 1000,
+      "reached_limit_count": 2,
+      "state_before": {
+        "active_eval_seeds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "next_available_eval_seed": 6,
+        "used_eval_seeds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "retired_eval_seeds": [],
+        "evaluation_score_limit": 1000,
+        "highest_completed_level": 0
+      },
+      "state_after": {
+        "active_eval_seeds": [
+          1,
+          2,
+          3,
+          6,
+          7
+        ],
+        "next_available_eval_seed": 8,
+        "used_eval_seeds": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "retired_eval_seeds": [
+          4,
+          5
+        ],
+        "evaluation_score_limit": 2000,
+        "highest_completed_level": 1000
+      },
+      "successful_slots": [
+        3,
+        4
+      ],
+      "replacement_seeds_by_slot": {
+        "3": 6,
+        "4": 7
+      },
+      "evaluated_score_limit": 1000,
+      "scheduled_training_step": 4250000,
+      "actual_training_step": 4250000,
+      "ranking_key": [
+        1000,
+        2,
+        7,
+        481.6,
+        1000
+      ]
+    },
+    {
+      "seeds": [
+        1,
+        2,
+        3,
+        6,
+        7
+      ],
+      "score_limit": 2000,
+      "episodes": [
+        {
+          "seed": 1,
+          "score": 131,
+          "reward": 614.9000000000561,
+          "frames": 4981,
+          "terminated": true,
+          "truncated": false,
+          "target_reached": false,
+          "termination_reason": "terminated"
+        },
+        {
+          "seed": 2,
+          "score": 232,
+          "reward": 1084.8000000000848,
+          "frames": 8771,
+          "terminated": true,
+          "truncated": false,
+          "target_reached": false,
+          "termination_reason": "terminated"
+        },
+        {
+          "seed": 3,
+          "score": 1,
+          "reward": 6.799999999999992,
+          "frames": 70,
+          "terminated": true,
+          "truncated": false,
+          "target_reached": false,
+          "termination_reason": "terminated"
+        },
+        {
+          "seed": 6,
+          "score": 535,
+          "reward": 2500.399999999073,
+          "frames": 20200,
+          "terminated": true,
+          "truncated": false,
+          "target_reached": false,
+          "termination_reason": "terminated"
+        },
+        {
+          "seed": 7,
+          "score": 64,
+          "reward": 300.8,
+          "frames": 2443,
+          "terminated": true,
+          "truncated": false,
+          "target_reached": false,
+          "termination_reason": "terminated"
+        }
+      ],
+      "scores": [
+        131,
+        232,
+        1,
+        535,
+        64
+      ],
+      "rewards": [
+        614.9000000000561,
+        1084.8000000000848,
+        6.799999999999992,
+        2500.399999999073,
+        300.8
+      ],
+      "episode_lengths": [
+        4981,
+        8771,
+        70,
+        20200,
+        2443
+      ],
+      "terminations": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "truncations": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "target_reached_flags": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "mean_score": 192.6,
+      "median_score": 131.0,
+      "std_score": 187.52770461987743,
+      "minimum_score": 1,
+      "maximum_score": 535,
+      "reached_limit_count": 0,
+      "state_before": {
+        "active_eval_seeds": [
+          1,
+          2,
+          3,
+          6,
+          7
+        ],
+        "next_available_eval_seed": 8,
+        "used_eval_seeds": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "retired_eval_seeds": [
+          4,
+          5
+        ],
+        "evaluation_score_limit": 2000,
+        "highest_completed_level": 1000
+      },
+      "state_after": {
+        "active_eval_seeds": [
+          1,
+          2,
+          3,
+          6,
+          7
+        ],
+        "next_available_eval_seed": 8,
+        "used_eval_seeds": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "retired_eval_seeds": [
+          4,
+          5
+        ],
+        "evaluation_score_limit": 2000,
+        "highest_completed_level": 1000
+      },
+      "successful_slots": [],
+      "replacement_seeds_by_slot": {},
+      "evaluated_score_limit": 2000,
+      "scheduled_training_step": 4500000,
+      "actual_training_step": 4500000,
+      "ranking_key": [
+        1000,
+        0,
+        1,
+        192.6,
+        535
+      ]
+    },
+    {
+      "seeds": [
+        1,
+        2,
+        3,
+        6,
+        7
+      ],
+      "score_limit": 2000,
+      "episodes": [
+        {
+          "seed": 1,
+          "score": 151,
+          "reward": 708.4000000000729,
+          "frames": 5736,
+          "terminated": true,
+          "truncated": false,
+          "target_reached": false,
+          "termination_reason": "terminated"
+        },
+        {
+          "seed": 2,
+          "score": 7,
+          "reward": 36.40000000000021,
+          "frames": 312,
+          "terminated": true,
+          "truncated": false,
+          "target_reached": false,
+          "termination_reason": "terminated"
+        },
+        {
+          "seed": 3,
+          "score": 49,
+          "reward": 232.3999999999929,
+          "frames": 1894,
+          "terminated": true,
+          "truncated": false,
+          "target_reached": false,
+          "termination_reason": "terminated"
+        },
+        {
+          "seed": 6,
+          "score": 283,
+          "reward": 1324.3999999999132,
+          "frames": 10708,
+          "terminated": true,
+          "truncated": false,
+          "target_reached": false,
+          "termination_reason": "terminated"
+        },
+        {
+          "seed": 7,
+          "score": 182,
+          "reward": 851.3000000000983,
+          "frames": 6886,
+          "terminated": true,
+          "truncated": false,
+          "target_reached": false,
+          "termination_reason": "terminated"
+        }
+      ],
+      "scores": [
+        151,
+        7,
+        49,
+        283,
+        182
+      ],
+      "rewards": [
+        708.4000000000729,
+        36.40000000000021,
+        232.3999999999929,
+        1324.3999999999132,
+        851.3000000000983
+      ],
+      "episode_lengths": [
+        5736,
+        312,
+        1894,
+        10708,
+        6886
+      ],
+      "terminations": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "truncations": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "target_reached_flags": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "mean_score": 134.4,
+      "median_score": 151.0,
+      "std_score": 98.12971007803905,
+      "minimum_score": 7,
+      "maximum_score": 283,
+      "reached_limit_count": 0,
+      "state_before": {
+        "active_eval_seeds": [
+          1,
+          2,
+          3,
+          6,
+          7
+        ],
+        "next_available_eval_seed": 8,
+        "used_eval_seeds": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "retired_eval_seeds": [
+          4,
+          5
+        ],
+        "evaluation_score_limit": 2000,
+        "highest_completed_level": 1000
+      },
+      "state_after": {
+        "active_eval_seeds": [
+          1,
+          2,
+          3,
+          6,
+          7
+        ],
+        "next_available_eval_seed": 8,
+        "used_eval_seeds": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "retired_eval_seeds": [
+          4,
+          5
+        ],
+        "evaluation_score_limit": 2000,
+        "highest_completed_level": 1000
+      },
+      "successful_slots": [],
+      "replacement_seeds_by_slot": {},
+      "evaluated_score_limit": 2000,
+      "scheduled_training_step": 4750000,
+      "actual_training_step": 4750000,
+      "ranking_key": [
+        1000,
+        0,
+        7,
+        134.4,
+        283
+      ]
+    },
+    {
+      "seeds": [
+        1,
+        2,
+        3,
+        6,
+        7
+      ],
+      "score_limit": 2000,
+      "episodes": [
+        {
+          "seed": 1,
+          "score": 20,
+          "reward": 95.29999999999906,
+          "frames": 784,
+          "terminated": true,
+          "truncated": false,
+          "target_reached": false,
+          "termination_reason": "terminated"
+        },
+        {
+          "seed": 2,
+          "score": 120,
+          "reward": 563.900000000047,
+          "frames": 4570,
+          "terminated": true,
+          "truncated": false,
+          "target_reached": false,
+          "termination_reason": "terminated"
+        },
+        {
+          "seed": 3,
+          "score": 911,
+          "reward": 4253.299999998386,
+          "frames": 34345,
+          "terminated": true,
+          "truncated": false,
+          "target_reached": false,
+          "termination_reason": "terminated"
+        },
+        {
+          "seed": 6,
+          "score": 283,
+          "reward": 1324.3999999999132,
+          "frames": 10708,
+          "terminated": true,
+          "truncated": false,
+          "target_reached": false,
+          "termination_reason": "terminated"
+        },
+        {
+          "seed": 7,
+          "score": 182,
+          "reward": 851.3000000000983,
+          "frames": 6886,
+          "terminated": true,
+          "truncated": false,
+          "target_reached": false,
+          "termination_reason": "terminated"
+        }
+      ],
+      "scores": [
+        20,
+        120,
+        911,
+        283,
+        182
+      ],
+      "rewards": [
+        95.29999999999906,
+        563.900000000047,
+        4253.299999998386,
+        1324.3999999999132,
+        851.3000000000983
+      ],
+      "episode_lengths": [
+        784,
+        4570,
+        34345,
+        10708,
+        6886
+      ],
+      "terminations": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "truncations": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "target_reached_flags": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "mean_score": 303.2,
+      "median_score": 182.0,
+      "std_score": 315.6842726522815,
+      "minimum_score": 20,
+      "maximum_score": 911,
+      "reached_limit_count": 0,
+      "state_before": {
+        "active_eval_seeds": [
+          1,
+          2,
+          3,
+          6,
+          7
+        ],
+        "next_available_eval_seed": 8,
+        "used_eval_seeds": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "retired_eval_seeds": [
+          4,
+          5
+        ],
+        "evaluation_score_limit": 2000,
+        "highest_completed_level": 1000
+      },
+      "state_after": {
+        "active_eval_seeds": [
+          1,
+          2,
+          3,
+          6,
+          7
+        ],
+        "next_available_eval_seed": 8,
+        "used_eval_seeds": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "retired_eval_seeds": [
+          4,
+          5
+        ],
+        "evaluation_score_limit": 2000,
+        "highest_completed_level": 1000
+      },
+      "successful_slots": [],
+      "replacement_seeds_by_slot": {},
+      "evaluated_score_limit": 2000,
+      "scheduled_training_step": 5000000,
+      "actual_training_step": 5000000,
+      "ranking_key": [
+        1000,
+        0,
+        20,
+        303.2,
+        911
+      ]
+    }
+  ],
+  "final_unseen_holdout": {
+    "seeds": [
+      1000001,
+      1000002,
+      1000003,
+      1000004,
+      1000005
+    ],
+    "score_limit": 10000,
+    "episodes": [
+      {
+        "seed": 1000001,
+        "score": 1187,
+        "reward": 5541.3000000020675,
+        "frames": 44741,
+        "terminated": true,
+        "truncated": false,
+        "target_reached": false,
+        "termination_reason": "terminated"
+      },
+      {
+        "seed": 1000002,
+        "score": 301,
+        "reward": 1406.7999999998547,
+        "frames": 11370,
+        "terminated": true,
+        "truncated": false,
+        "target_reached": false,
+        "termination_reason": "terminated"
+      },
+      {
+        "seed": 1000003,
+        "score": 235,
+        "reward": 1098.8000000000748,
+        "frames": 8884,
+        "terminated": true,
+        "truncated": false,
+        "target_reached": false,
+        "termination_reason": "terminated"
+      },
+      {
+        "seed": 1000004,
+        "score": 190,
+        "reward": 890.4000000001054,
+        "frames": 7205,
+        "terminated": true,
+        "truncated": false,
+        "target_reached": false,
+        "termination_reason": "terminated"
+      },
+      {
+        "seed": 1000005,
+        "score": 85,
+        "reward": 400.4000000000179,
+        "frames": 3250,
+        "terminated": true,
+        "truncated": false,
+        "target_reached": false,
+        "termination_reason": "terminated"
+      }
+    ],
+    "scores": [
+      1187,
+      301,
+      235,
+      190,
+      85
+    ],
+    "rewards": [
+      5541.3000000020675,
+      1406.7999999998547,
+      1098.8000000000748,
+      890.4000000001054,
+      400.4000000000179
+    ],
+    "episode_lengths": [
+      44741,
+      11370,
+      8884,
+      7205,
+      3250
+    ],
+    "terminations": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "truncations": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "target_reached_flags": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "mean_score": 399.6,
+    "median_score": 235.0,
+    "std_score": 399.9297938388687,
+    "minimum_score": 85,
+    "maximum_score": 1187,
+    "reached_limit_count": 0,
+    "success_percentage": 0.0,
+    "purpose": "One-time final holdout; never used for checkpoint selection."
+  }
+}

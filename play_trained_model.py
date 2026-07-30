@@ -29,7 +29,7 @@ DEFAULT_SCREENSHOT_DIR = PROJECT_ROOT / "artifacts" / "inference_screenshots"
 EXPECTED_ALGORITHM = (
     "Dueling Double DQN with Prioritized Experience Replay"
 )
-DEFAULT_SEED = 777
+DEFAULT_SEED = 42
 DEFAULT_FPS = 30
 PANEL_WIDTH = 520
 WINDOW_TITLE = "Flappy Bird - Legacy Dueling DDQN Viewer"

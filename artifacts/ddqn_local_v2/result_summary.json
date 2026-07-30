@@ -1,0 +1,51 @@
+{
+  "experiment_name": "ddqn_local_v2",
+  "configured_budget": 5000000,
+  "actual_training_transitions": 5000000,
+  "training_duration_seconds": 9206.338402599999,
+  "worker_configuration": {
+    "n_envs": 8,
+    "torch_threads": 2,
+    "gradient_steps": 1,
+    "approx_transitions_per_update": 8.0
+  },
+  "best_checkpoint_step": 4250000,
+  "best_periodic_ranking_key": [
+    1000,
+    2,
+    7,
+    481.6,
+    1000
+  ],
+  "final_periodic_active_seeds": [
+    1,
+    2,
+    3,
+    6,
+    7
+  ],
+  "final_periodic_score_limit": 2000,
+  "final_unseen_holdout_seeds": [
+    1000001,
+    1000002,
+    1000003,
+    1000004,
+    1000005
+  ],
+  "final_unseen_holdout_scores": [
+    1187,
+    301,
+    235,
+    190,
+    85
+  ],
+  "final_unseen_holdout_statistics": {
+    "mean": 399.6,
+    "median": 235.0,
+    "std": 399.9297938388687,
+    "minimum": 85,
+    "maximum": 1187
+  },
+  "exported_model_path": "<repo>\\artifacts\\ddqn_local_v2\\exported_model.pt",
+  "gif_path": "<repo>\\artifacts\\ddqn_local_v2\\demonstration.gif"
+}

@@ -58,7 +58,22 @@ def resolve_repository_root(start: Path | None = None) -> Path:
 
 
 class FlappyRewardWrapper(gym.Wrapper):
-    """Apply reward shaping only to training environments."""
+    """Apply reward shaping only to training environments.
+
+    Every term exists for a specific reason, documented in the training
+    notebook's configuration section:
+      - survival_reward: small per-frame reward so staying alive is never
+        worse than acting randomly, without dominating the pipe signal.
+      - pipe_reward: the real objective; scaled well above survival_reward
+        so passing pipes dominates the return.
+      - death_penalty: discourages reckless play; symmetric with pipe_reward
+        so avoiding one death is worth roughly one pipe.
+      - top_penalty: discourages hugging the ceiling (mirrors the
+        environment's own -0.5 near-top signal).
+      - flap_cost: a tiny continuous cost on the flap action to discourage
+        flap-spamming; two orders of magnitude smaller than pipe_reward and
+        death_penalty so it never outweighs surviving or scoring.
+    """
 
     def __init__(
         self,
@@ -67,12 +82,16 @@ class FlappyRewardWrapper(gym.Wrapper):
         pipe_reward: float = 5.0,
         death_penalty: float = -5.0,
         top_penalty: float = -1.0,
+        flap_cost: float = 0.0,
+        flap_action: int = 1,
     ) -> None:
         super().__init__(env)
         self.survival_reward = float(survival_reward)
         self.pipe_reward = float(pipe_reward)
         self.death_penalty = float(death_penalty)
         self.top_penalty = float(top_penalty)
+        self.flap_cost = float(flap_cost)
+        self.flap_action = int(flap_action)
         self.previous_score = 0
 
     def reset(self, **kwargs):
@@ -89,6 +108,8 @@ class FlappyRewardWrapper(gym.Wrapper):
         pipes_passed = max(0, current_score - self.previous_score)
 
         shaped_reward = self.survival_reward + self.pipe_reward * pipes_passed
+        if int(action) == self.flap_action:
+            shaped_reward += self.flap_cost
         if terminated:
             shaped_reward += self.death_penalty
         elif float(original_reward) < 0:
@@ -143,6 +164,11 @@ class FlappyEnvFactory:
     score_limit: int
     pipe_gap: int = 100
     torch_threads: int = 1
+    survival_reward: float = 0.05
+    pipe_reward: float = 5.0
+    death_penalty: float = -5.0
+    top_penalty: float = -1.0
+    flap_cost: float = 0.0
 
     def __call__(self):
         configure_process_threads(self.torch_threads)
@@ -161,7 +187,14 @@ class FlappyEnvFactory:
             score_limit=int(self.score_limit),
             audio_on=False,
         )
-        env = FlappyRewardWrapper(env)
+        env = FlappyRewardWrapper(
+            env,
+            survival_reward=self.survival_reward,
+            pipe_reward=self.pipe_reward,
+            death_penalty=self.death_penalty,
+            top_penalty=self.top_penalty,
+            flap_cost=self.flap_cost,
+        )
         env = WorkerIdentityWrapper(env, self.rank, worker_seed)
         env = Monitor(env, info_keywords=("score", "worker_rank", "worker_seed"))
         env.action_space.seed(worker_seed)
@@ -175,9 +208,11 @@ def make_training_env_factories(
     score_limit: int,
     pipe_gap: int = 100,
     torch_threads: int = 1,
+    reward_shaping: dict | None = None,
 ) -> list[FlappyEnvFactory]:
     """Return one independently seeded, importable callable per worker."""
 
+    shaping = dict(reward_shaping or {})
     return [
         FlappyEnvFactory(
             rank=rank,
@@ -185,6 +220,7 @@ def make_training_env_factories(
             score_limit=score_limit,
             pipe_gap=pipe_gap,
             torch_threads=torch_threads,
+            **shaping,
         )
         for rank in range(int(n_envs))
     ]
@@ -196,6 +232,7 @@ def create_training_vec_env(
     score_limit: int,
     pipe_gap: int = 100,
     torch_threads: int = 1,
+    reward_shaping: dict | None = None,
 ) -> SubprocVecEnv:
     """Create a process vector environment with explicit Windows-safe spawning."""
 
@@ -205,6 +242,7 @@ def create_training_vec_env(
         score_limit=score_limit,
         pipe_gap=pipe_gap,
         torch_threads=torch_threads,
+        reward_shaping=reward_shaping,
     )
     return SubprocVecEnv(factories, start_method="spawn")
 

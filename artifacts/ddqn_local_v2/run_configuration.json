@@ -1,0 +1,17 @@
+{
+  "experiment_name": "ddqn_local_v2",
+  "run_mode": "full",
+  "run_transitions_target": 5000000,
+  "resume_source": "<repo>\\artifacts\\ddqn_local_v2\\checkpoints\\latest.pt",
+  "n_envs": 8,
+  "torch_threads": 2,
+  "gradient_steps": 1,
+  "reward_shaping": {
+    "survival_reward": 0.05,
+    "pipe_reward": 5.0,
+    "death_penalty": -5.0,
+    "top_penalty": -1.0,
+    "flap_cost": -0.01
+  },
+  "seed": 42
+}

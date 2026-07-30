@@ -1,4 +1,66 @@
-.venv/
+# ---------------------------------------------------------------------------
+# Python
+# ---------------------------------------------------------------------------
 __pycache__/
 *.py[cod]
+*$py.class
+.venv/
+venv/
+env/
 .ipynb_checkpoints/
+*.egg-info/
+
+# ---------------------------------------------------------------------------
+# Editors and OS cruft
+# ---------------------------------------------------------------------------
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# ---------------------------------------------------------------------------
+# Training locks and console capture
+# The notebook writes a lock file into the active run directory so two kernels
+# cannot train into the same experiment. Console/warning captures are pure
+# nbconvert noise and regularly leak absolute local paths.
+# ---------------------------------------------------------------------------
+train.lock
+artifacts/**/train.lock
+*console*.log
+*.err.log
+nohup.out
+
+# ---------------------------------------------------------------------------
+# Disposable run directories
+# Smoke runs (FLAPPY_RUN_MODE=smoke) and benchmark runs (FLAPPY_RUN_MODE=
+# benchmark) are validation-only, reproducible on demand, and carry no result
+# value. The notebook gives them timestamped directory names precisely so they
+# stay disposable.
+# ---------------------------------------------------------------------------
+artifacts/*smoke*/
+artifacts/*benchmark*/
+artifacts/*_tmp/
+artifacts/tmp_*/
+
+# Executed notebook snapshots (nbconvert --execute output). The source notebook
+# is the artefact worth keeping; executed copies just duplicate it with outputs.
+*-executed.ipynb
+*_executed.ipynb
+
+# ---------------------------------------------------------------------------
+# Routine periodic checkpoints
+# Training writes a checkpoint every 250,000 transitions plus a rolling
+# latest.pt resume pointer. Only deliberately chosen milestones belong in git.
+# To publish a new one:  git add -f <path>
+# ---------------------------------------------------------------------------
+artifacts/**/checkpoints/*.pt
+artifacts/**/latest.pt
+
+# Never ignore the deliberately published models.
+!**/best_model.pt
+!**/flappy_ddqn_score_1000.pt
+!artifacts/ddqn_local_v2/checkpoints/ddqn_001000000.pt
+!artifacts/ddqn_local_v2/checkpoints/ddqn_002000000.pt
+!artifacts/ddqn_local_v2/checkpoints/ddqn_003000000.pt
+!artifacts/ddqn_local_v2/checkpoints/ddqn_004250000.pt
+!artifacts/ddqn_local_v2/checkpoints/ddqn_005000000.pt

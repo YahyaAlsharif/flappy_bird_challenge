@@ -1,0 +1,112 @@
+{
+  "seeds": [
+    1000001,
+    1000002,
+    1000003,
+    1000004,
+    1000005
+  ],
+  "score_limit": 10000,
+  "episodes": [
+    {
+      "seed": 1000001,
+      "score": 1187,
+      "reward": 5541.3000000020675,
+      "frames": 44741,
+      "terminated": true,
+      "truncated": false,
+      "target_reached": false,
+      "termination_reason": "terminated"
+    },
+    {
+      "seed": 1000002,
+      "score": 301,
+      "reward": 1406.7999999998547,
+      "frames": 11370,
+      "terminated": true,
+      "truncated": false,
+      "target_reached": false,
+      "termination_reason": "terminated"
+    },
+    {
+      "seed": 1000003,
+      "score": 235,
+      "reward": 1098.8000000000748,
+      "frames": 8884,
+      "terminated": true,
+      "truncated": false,
+      "target_reached": false,
+      "termination_reason": "terminated"
+    },
+    {
+      "seed": 1000004,
+      "score": 190,
+      "reward": 890.4000000001054,
+      "frames": 7205,
+      "terminated": true,
+      "truncated": false,
+      "target_reached": false,
+      "termination_reason": "terminated"
+    },
+    {
+      "seed": 1000005,
+      "score": 85,
+      "reward": 400.4000000000179,
+      "frames": 3250,
+      "terminated": true,
+      "truncated": false,
+      "target_reached": false,
+      "termination_reason": "terminated"
+    }
+  ],
+  "scores": [
+    1187,
+    301,
+    235,
+    190,
+    85
+  ],
+  "rewards": [
+    5541.3000000020675,
+    1406.7999999998547,
+    1098.8000000000748,
+    890.4000000001054,
+    400.4000000000179
+  ],
+  "episode_lengths": [
+    44741,
+    11370,
+    8884,
+    7205,
+    3250
+  ],
+  "terminations": [
+    true,
+    true,
+    true,
+    true,
+    true
+  ],
+  "truncations": [
+    false,
+    false,
+    false,
+    false,
+    false
+  ],
+  "target_reached_flags": [
+    false,
+    false,
+    false,
+    false,
+    false
+  ],
+  "mean_score": 399.6,
+  "median_score": 235.0,
+  "std_score": 399.9297938388687,
+  "minimum_score": 85,
+  "maximum_score": 1187,
+  "reached_limit_count": 0,
+  "success_percentage": 0.0,
+  "purpose": "One-time final holdout; never used for checkpoint selection."
+}
