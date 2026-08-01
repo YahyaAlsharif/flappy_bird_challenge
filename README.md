@@ -678,3 +678,14 @@ this repository.
 evaluation. All numbers reported here are reproducible from the artefacts and code in this
 repository, and the raw evaluation JSON is committed so anything stated above can be
 checked directly.*
+
+---
+
+## 15. License
+
+Released under the [MIT License](LICENSE) — you're free to use, modify, and distribute this
+code, including commercially, provided the copyright notice and licence text are retained.
+The code is provided as is, without warranty of any kind.
+
+This was built as a personal learning project. It is not maintained as production software,
+and the results reported here are specific to the setup described above.
