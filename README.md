@@ -511,8 +511,8 @@ This is the part that is easiest to misrepresent, so it gets its own section.
 three episodes were **stopped by that limit**, so 1,000 is a floor for those seeds, not
 their true score — the agent might have gone much further, or crashed at 1,001. The v2
 holdout used a limit of 10,000 that was never reached, so all five of its numbers are real
-crash scores. **A capped mean of 861.3 and an uncapped mean of 399.6 do not measure the
-same thing** and should not be compared directly.
+crash scores. **A mean of 861.3 truncated by its cap and a mean of 399.6 whose 10,000 cap
+was never reached do not measure the same thing** and should not be compared directly.
 
 **Variance dominates.** Look at the v2 holdout spread: 1,187 down to 85, standard deviation
 399.9 on a mean of 399.6. The standard deviation is as large as the mean. The periodic
@@ -523,7 +523,8 @@ tells you very little.
 **So, precisely:**
 
 - **5,120** is the *best single episode I recorded*, from the Kaggle checkpoint, uncapped.
-- **399.6** is the *mean* of the v2 model over five unseen seeds, uncapped.
+- **399.6** is the *mean* of the v2 model over five unseen seeds, capped at 10,000 (a cap
+  no episode reached).
 - **861.3** is the *capped* mean of the Kaggle model over three seeds, and is a lower bound.
 - 5,120 is **not** an average, **not** reproducible on demand, and **not** a guarantee.
 
